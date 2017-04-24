@@ -43,6 +43,13 @@
       <link rel="stylesheet" href="css/ie.css">
       <![endif]-->
 
+<style>
+.control-global {height:35px; width:37px; margin: auto;}
+.control-group {height:76px; width:26px; margin: auto;}
+.control-single {height:22px; width:26px; margin: auto;}
+</style>
+
+
 
 </head>
 <body>
@@ -95,14 +102,18 @@
 					</div>
 					
 					<div class="row">
-						<div class="col-sm-4 control-on1 control-off1" id="show-all">
+						<div class="col-sm-4">
+							<div class="control-global control-on1 control-off1" id="show-all">
 							 <img src="http://www.businesszon.es/icons/map_controls/all_on_35_35.png" alt="" width="35" height="35"> 
+							 </div>
 						</div><!-- end of show all button col -->
-						<div class="col-sm-4"><!-- map reset button-->
+						<div class="col-sm-4" style="margin: auto;"><!-- map reset button-->
 							<img width="60" height="20" src="http://www.businesszon.es/icons/map_controls/reset_map_60_20.png" border="0">
 						</div>	<!-- end map reset button col -->
-						<div class="col-sm-4 control-on2 control-off2" id="hide-all">
+						<div class="col-sm-4">
+							<div class="control-global control-on2 control-off2" id="hide-all">
 							 <img src="http://www.businesszon.es/icons/map_controls/all_off_35_35.png" alt="" width="35" height="35" > 
+							 </div>
 						</div> <!-- end of hide all button col -->
 					</div> <!-- end of show reset hide row -->
 					
@@ -114,23 +125,35 @@
 		          </div><!-- END MARKER GROUP title ROW -->
 					
 				  <div class="row row-layer-control"><!-- START MARKER GROUP CONTROL ROW -->
-				    <div class="col-sm-2 layer-group-button control-on-stay control-off" id="stay">
+				    <div class="col-sm-2">
+				    	<div class="control-group layer-group-button control-on-stay control-off" id="stay">
 					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_stay_3.png" alt="" width="22" height="76">
+					    </div>
 					</div>
-			      	<div class="col-sm-2 layer-group-button control-on-food control-off" id="food">
+			      	<div class="col-sm-2">
+			      		<div class="control-group layer-group-button control-on-food control-off" id="food">
 					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_food_3.png" alt="" width="22" height="76"> 
+					    </div>
 				    </div>
-				    <div class="col-sm-2 layer-group-button control-on-poi control-off" id="poi">
+				    <div class="col-sm-2">
+				    	<div class="control-group layer-group-button control-on-poi control-off" id="poi">
 					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_poi_2.png" alt="" width="22"  height="76">
+					    </div>
 					</div>
-				    <div class="col-sm-2 layer-group-button control-on-todo control-off"id="todo">
+				    <div class="col-sm-2">
+				    	<div class="control-group layer-group-button control-on-todo control-off"id="todo">
 					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_todo_3.png" alt="" width="22"  height="76" > 
+					    </div>
 					</div>
-				    <div class="col-sm-2 layer-group-button control-on-info control-off" id="info">
+				    <div class="col-sm-2">
+				    	<div class="control-group layer-group-button control-on-info control-off" id="info">
 					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_info_3.png" alt="" width="22" height="76" > 
+					    </div>
 					</div>
-				    <div class="col-sm-2 layer-group-button control-on-tspt control-off" id="tspt">
+				    <div class="col-sm-2">
+				    <div class="control-group layer-group-button control-on-tspt control-off" id="tspt">
 					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_tspt_2.png" alt="" width="22" height="76" > 
+					    </div>
 					</div>
    				</div><!-- END MARKER GROUP CONTROL ROW -->
 	    					
@@ -142,23 +165,35 @@
       		    </div><!-- END LAYER CONTROL ROW -->
       		    
 				<div class="row row-layer-control"><!-- START MARKER GROUP CONTROL ROW -->
-					<div class="col-sm-2 group-stay layer control-on-stay control-off" id="hotels">
-					    <img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_stay/icon_tt_na_hotel.png" alt="" width="22" height="22"> 
+					<div class="col-sm-2">
+						<div class="control-single group-stay layer control-on-stay control-off" id="hotels">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_stay/icon_tt_na_hotel.png" alt="" width="22" height="22" style="vertical-align:top;"> 
+					    </div>
 					</div>
-					<div class="col-sm-2 group-food layer control-on-food control-off" id="restaurants">
-						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_food/icon_tt_na_eatery.png" alt="" width="22" height="22"> 
+					<div class="col-sm-2">
+						<div class="control-single group-food layer control-on-food control-off" id="restaurants">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_food/icon_tt_na_eatery.png" alt="" width="22" height="22" style="vertical-align:top;"> 
+						</div>
 					</div>
-					<div class="col-sm-2 group-poi layer control-on-poi control-off" id="points_of_interest">
-						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_poi/icon_tt_na_poi.png"  alt="" width="22" height="22">
+					<div class="col-sm-2">
+						<div class="control-single group-poi layer control-on-poi control-off" id="points_of_interest">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_poi/icon_tt_na_poi.png"  alt="" width="22" height="22" style="vertical-align:top;">
+						</div>
 					</div>
-					<div class="col-sm-2 group-todo layer control-on-todo control-off" id="activities"> 
-						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_todo/icon_tt_na_activity.png" alt="" width="22" height="22" > 
+					<div class="col-sm-2">
+						<div class="control-single group-todo layer control-on-todo control-off" id="activities"> 
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_todo/icon_tt_na_activity.png" alt="" width="22" height="22" style="vertical-align:top;"> 
+						</div>
 					</div>
-					<div class="col-sm-2 group-info layer control-on-info control-off" id="tourist_information">
-						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_info/icon_tt_na_touristinfo.png" alt="" width="22" height="22" > 
+					<div class="col-sm-2">
+						<div class="control-single group-info layer control-on-info control-off" id="tourist_information">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_info/icon_tt_na_touristinfo.png" alt="" width="22" height="22" style="vertical-align:top;">
+						</div>
 					</div>
-					<div class="col-sm-2 group-tspt layer control-on-tspt control-off" id="railway_stations">
-						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_tspt/icon_tt_na_railway.png" alt="" width="22" height="22" > 
+					<div class="col-sm-2">
+						<div class="control-single group-tspt layer control-on-tspt control-off" id="railway_stations">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_tspt/icon_tt_na_railway.png" alt="" width="22" height="22" style="vertical-align:top;"> 
+						</div>
 					</div>
 				</div><!-- end MARKER GROUP CONTROL ROW 1 -->
 
