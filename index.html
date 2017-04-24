@@ -45,11 +45,128 @@
 
 
 </head>
-<body onload="initialise()">
+<body>
 
-<p>this is and again</p>
-   
+    <div class="container"><!--Start of Container-->
 
+
+			 <div class="row"><!---Start of Title Row-->
+
+			    <div class="col-xs-12 text-center"><!--Start of Title Column-->
+                    <h3><b>AVIEMORE MAP</b></h3>
+                    <hr>
+                </div><!--End of Title Column-->
+
+		    </div><!--End of Title Row-->
+
+			<div class="row"><!--Start of Locatory Row-->
+ 
+                <div class="col-md-8 col-sm-6"><!--Start of Map Column 8 cols wide for desktop, 6 cols wide for small tablets, stacked for anything smaller-->
+
+					<div id="map-avi"></div>
+
+                </div><!-- End of Map Column-->
+
+				<div class="col-md-4 col-sm-6"><!-- start of key column, 4 cols for desktop, 6 for small tablets -->
+				<!-- now nest the key columns and rows all set to small tablet, anything smaller will stack, but larger will have different widths depending on container column being 4 or 6 for different displays-->
+				
+				
+				 <div class="row"><!-- search box from whatsthere -->
+                  <div class="col-sm-12" id="menusp">
+  					 <p id="titlesearch"><b>SEARCH AVIEMORE</b></p>
+				     <div id="dataContainersp"><!-- holder for definition list of xml data --> 
+						<form id="searchForm" action="#">
+						   	<div>
+							    <label id="filterLabel" for="filterBox" >type search term here</label>
+								<input type="text" id="filterBox" name="filterBox" value="" />
+							</div>
+						</form>
+					    <ul id="dataList">
+					    </ul>
+				    </div><!-- end of holder for definition list of xml data -->
+			    </div><!-- end search box col -->
+			    </div><!-- end search box row -->
+				
+
+					<div class="row">
+						<div class="col-sm-12">
+							<h4>map marker controls</h4>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-sm-4 control-on1 control-off1" id="show-all">
+							 <img src="http://www.businesszon.es/icons/map_controls/all_on_35_35.png" alt="" width="35" height="35"> 
+						</div><!-- end of show all button col -->
+						<div class="col-sm-4"><!-- map reset button-->
+							<img width="60" height="20" src="http://www.businesszon.es/icons/map_controls/reset_map_60_20.png" border="0">
+						</div>	<!-- end map reset button col -->
+						<div class="col-sm-4 control-on2 control-off2" id="hide-all">
+							 <img src="http://www.businesszon.es/icons/map_controls/all_off_35_35.png" alt="" width="35" height="35" > 
+						</div> <!-- end of hide all button col -->
+					</div> <!-- end of show reset hide row -->
+					
+					
+					<div class="row"><!-- start group markers title row -->
+          				<div class="col-sm-12">
+                   			<h4>MAP MARKER GROUP CLICK ON/OFF</h4>
+			          </div><!-- END MARKER GROUP title COL -->
+		          </div><!-- END MARKER GROUP title ROW -->
+					
+				  <div class="row row-layer-control"><!-- START MARKER GROUP CONTROL ROW -->
+				    <div class="col-sm-2 layer-group-button control-on-stay control-off" id="stay">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_stay_3.png" alt="" width="22" height="76">
+					</div>
+			      	<div class="col-sm-2 layer-group-button control-on-food control-off" id="food">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_food_3.png" alt="" width="22" height="76"> 
+				    </div>
+				    <div class="col-sm-2 layer-group-button control-on-poi control-off" id="poi">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_poi_2.png" alt="" width="22"  height="76">
+					</div>
+				    <div class="col-sm-2 layer-group-button control-on-todo control-off"id="todo">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_todo_3.png" alt="" width="22"  height="76" > 
+					</div>
+				    <div class="col-sm-2 layer-group-button control-on-info control-off" id="info">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_info_3.png" alt="" width="22" height="76" > 
+					</div>
+				    <div class="col-sm-2 layer-group-button control-on-tspt control-off" id="tspt">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/key_tspt_2.png" alt="" width="22" height="76" > 
+					</div>
+   				</div><!-- END MARKER GROUP CONTROL ROW -->
+	    					
+					
+				<div class="row"><!-- start map marker control panel row -->
+        		  <div class="col-sm-12"><!-- start layer control col -->
+                   	<h4>MAP MARKER ICONS CLICK ON/OFF</h4>
+	  	          </div><!-- END LAYER CONTROL COL -->
+      		    </div><!-- END LAYER CONTROL ROW -->
+      		    
+				<div class="row row-layer-control"><!-- START MARKER GROUP CONTROL ROW -->
+					<div class="col-sm-2 group-stay layer control-on-stay control-off" id="hotels">
+					    <img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_stay/icon_tt_na_hotel.png" alt="" width="22" height="22"> 
+					</div>
+					<div class="col-sm-2 group-food layer control-on-food control-off" id="restaurants">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_food/icon_tt_na_eatery.png" alt="" width="22" height="22"> 
+					</div>
+					<div class="col-sm-2 group-poi layer control-on-poi control-off" id="points_of_interest">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_poi/icon_tt_na_poi.png"  alt="" width="22" height="22">
+					</div>
+					<div class="col-sm-2 group-todo layer control-on-todo control-off" id="activities"> 
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_todo/icon_tt_na_activity.png" alt="" width="22" height="22" > 
+					</div>
+					<div class="col-sm-2 group-info layer control-on-info control-off" id="tourist_information">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_info/icon_tt_na_touristinfo.png" alt="" width="22" height="22" > 
+					</div>
+					<div class="col-sm-2 group-tspt layer control-on-tspt control-off" id="railway_stations">
+						<img src="http://aviemoremap.co.uk/aviemap_icons/tt_na/tt_na_tspt/icon_tt_na_railway.png" alt="" width="22" height="22" > 
+					</div>
+				</div><!-- end MARKER GROUP CONTROL ROW 1 -->
+
+
+				</div> <!--End of key column-->
+
+   			</div><!--End of Locatory Row-->
+    </div><!--End of Container-->
 
 
 
