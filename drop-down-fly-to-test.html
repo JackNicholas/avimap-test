@@ -24,8 +24,8 @@
    <div id="map"></div>
    <div id="control">
            
-            <select name="areasList" id="areasList">
-			    <option Id="areaView">Select An Area To View</option>
+            <select name="areasList" id="areasList" onchange="areaChange(this);">
+			    <option Id="areaView">Select An Area To View 0917</option>
                 <option Id="areaParis">Fly to Paris</option>
                 <option Id="areaLondon">Fly to London</option>
 
@@ -36,19 +36,20 @@
  
  
  <script type="text/javascript">
+ 
+ function areaChange() {
+    var areaSelectList = $('select#areasList');
+    var selectedValue = $('option:selected', areaSelectList).val();
+
+    alert(selectedValue);
+
+    
+}
+
+ 
+ 
 $(document).ready(function(){
-$('#areasList').on('change', function() {
-  if ( this.value == 'areaParis')
-  {
-	alert('paris');
-   }; // end if
-   
-  if ( this.value == 'areaLondon')
-  {
-   	alert('london');
-  }; // end if 
-  
-}); // end on change
+
 
     
    var map = L.map("map");
