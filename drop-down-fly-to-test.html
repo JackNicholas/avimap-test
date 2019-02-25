@@ -40,18 +40,12 @@ $(document).ready(function(){
 $('#areasList').on('change', function() {
   if ( this.value == 'areaParis')
   {
-	map.flyTo([48.8, 2.4], 10, {
-        animate: true,
-        duration: 4
-        }); // end fly to
+	alert(this.value);
    }; // end if
    
   if ( this.value == 'areaLondon')
   {
-   	map.flyTo([51.5, 0], 10, {
-        animate: true,
-        duration: 4 
-        }); // end fly to
+   	alert(this.value);
   }; // end if 
   
 }); // end on change
