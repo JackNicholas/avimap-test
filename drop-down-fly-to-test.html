@@ -25,7 +25,7 @@
    <div id="control">
            
             <select name="areasList" id="areasList" onchange="areaChange(this);">
-			    <option Id="areaView">Select An Area To View 0722</option>
+			    <option Id="areaView">Select An Area To View 0728</option>
                 <option Id="areaParis">Fly to Paris</option>
                 <option Id="areaLondon">Fly to London</option>
 
@@ -61,20 +61,20 @@ function areaChange() {
     
      if (selectedID == 'areaParis')
   {
-  alert("hi from Paris");
-//	map.flyTo([48.8, 2.4], 10, {
-  //      animate: true,
-    //    duration: 4
-      //  }); // end fly to
+  //alert("hi from Paris");
+	map.flyTo([48.8, 2.4], 10, {
+        animate: true,
+        duration: 4
+        }); // end fly to
    }; // end if
    
   if (selectedID == 'areaLondon')
   {
-  alert("hi from London");
-//   	map.flyTo([51.5, 0], 10, {
-  //      animate: true,
-    //    duration: 4 
-      //  }); // end fly to
+  //alert("hi from London");
+   	map.flyTo([51.5, 0], 10, {
+        animate: true,
+        duration: 4 
+        }); // end fly to
   }; // end if    
 }; // end areaChange function 
 
