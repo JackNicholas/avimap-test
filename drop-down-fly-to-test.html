@@ -37,7 +37,7 @@
  
  <script type="text/javascript">
  
- function areaChange() {
+function areaChange() {
 //    var areaSelectList = $('select#areasList');
   //  var selectedValue = $('option:selected', areaSelectList).val();
     var selectedID = $('#areasList option:selected').attr('id');
@@ -47,22 +47,22 @@
     
      if (selectedID == 'areaParis')
   {
-	map.flyTo([48.8, 2.4], 10, {
-        animate: true,
-        duration: 4
-        }); // end fly to
+  alert("hi from Paris");
+//	map.flyTo([48.8, 2.4], 10, {
+  //      animate: true,
+    //    duration: 4
+      //  }); // end fly to
    }; // end if
    
   if (selectedID == 'areaLondon')
   {
-   	map.flyTo([51.5, 0], 10, {
-        animate: true,
-        duration: 4 
-        }); // end fly to
-  }; // end if 
-
-    
-}
+  alert("hi from London");
+//   	map.flyTo([51.5, 0], 10, {
+  //      animate: true,
+    //    duration: 4 
+      //  }); // end fly to
+  }; // end if    
+}; // end areaChange function 
 
  
  
@@ -72,10 +72,10 @@ $(document).ready(function(){
     
    var map = L.map("map");
 L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(map);
-
-
 		
 map.setView([51.5, 0], 10);
+
+
 
 }); // end document.ready
 
