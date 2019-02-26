@@ -38,9 +38,9 @@
  <script type="text/javascript">
  
  function areaChange() {
-    var areaSelectList = $('select#areasList');
-    var selectedValue = $('option:selected', areaSelectList).val();
-    var selectedID = $('option.selected', areaSelectList).attr('id');
+//    var areaSelectList = $('select#areasList');
+  //  var selectedValue = $('option:selected', areaSelectList).val();
+    var selectedID = $('#areasList option:selected').attr('id');
 
     //alert(selectedValue);
     alert(selectedID);
