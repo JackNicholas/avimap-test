@@ -40,8 +40,10 @@
  function areaChange() {
     var areaSelectList = $('select#areasList');
     var selectedValue = $('option:selected', areaSelectList).val();
+    var selectedID = $('option.selected', areaSelectList).attr('id');
 
-    alert(selectedValue);
+    //alert(selectedValue);
+    alert(selectedID);
 
     
 }
