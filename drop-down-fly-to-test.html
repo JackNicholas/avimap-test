@@ -25,7 +25,7 @@
    <div id="control">
            
             <select name="areasList" id="areasList" onchange="areaChange(this);">
-			    <option Id="areaView">Select An Area To View 0728</option>
+			    <option Id="areaView">Select An Area To View</option>
                 <option Id="areaParis">Fly to Paris</option>
                 <option Id="areaLondon">Fly to London</option>
 
@@ -36,32 +36,17 @@
  
  
  <script type="text/javascript">
- 
-
- 
- 
-//$(document).ready(function(){
-
-
-    
+     
    var map = L.map("map");
 L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(map);
 		
 map.setView([51.5, 0], 10);
 
-
-
 function areaChange() {
-//    var areaSelectList = $('select#areasList');
-  //  var selectedValue = $('option:selected', areaSelectList).val();
     var selectedID = $('#areasList option:selected').attr('id');
-
-    //alert(selectedValue);
-    //alert(selectedID);
     
      if (selectedID == 'areaParis')
   {
-  //alert("hi from Paris");
 	map.flyTo([48.8, 2.4], 10, {
         animate: true,
         duration: 4
@@ -70,17 +55,12 @@ function areaChange() {
    
   if (selectedID == 'areaLondon')
   {
-  //alert("hi from London");
    	map.flyTo([51.5, 0], 10, {
         animate: true,
         duration: 4 
         }); // end fly to
   }; // end if    
 }; // end areaChange function 
-
-
-
-//}); // end document.ready
 
 
   </script>
