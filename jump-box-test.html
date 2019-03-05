@@ -179,7 +179,7 @@
                   <div class="row">
                
 			          <div class="col-md-10 col-md-offset-1 text-center">
-                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1108</b></h3>  
+                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1128</b></h3>  
                          
                           <hr>
                 </div>
@@ -656,7 +656,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 
 var myIcon = L.icon({
-    iconUrl: 'hrm_icons/hrm_lc/sr-map-icon.png',
+    iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_lc/sr-map-icon.png',
     iconSize: [35, 40],
     iconAnchor: [17,40],
     popupAnchor: [0, -40],
@@ -667,63 +667,63 @@ var myIcon = L.icon({
 	
 //create icons
 var std_gauge = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_standard_gauge.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_standard_gauge.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });
 
 var narr_gauge = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_narrow_gauge.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_narrow_gauge.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });
   
 var mini_gauge = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_miniature_railway.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_miniature_railway.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });  
   
 var museums = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_museum.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_museum.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });
 
 var associations = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_railassoc.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_railassoc.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });
 
 var webcams = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_railcams.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_railcams.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });
 
 var accommodation = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_accommodation.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_accommodation.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });
 
 var blogs = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_blognews.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_blognews.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
 });
 
 var services = L.icon({
-  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_railassoc.png',
+  iconUrl: 'https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_wa/icon_hrm_wa_railassoc.png',
   iconSize: [22, 25],
   iconAnchor:   [11, 25],
   popupAnchor:  [0, -25]
@@ -853,42 +853,44 @@ var servicesLayer = L.geoJson(false, {
     onEachFeature: oneachfeature2
 	
 	}).addTo(map);	
+	
+	
 
 	
 //populate GeoJSON layers with data from external files
-$.getJSON("hrm_geojson/stdgauge.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/stdgauge.geojson", function(data) {
     std_gaugeLayer.addData(data);
 });
 
 
-$.getJSON("hrm_geojson/narrgauge.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/narrgauge.geojson", function(data) {
     narr_gaugeLayer.addData(data);
 });
 
-$.getJSON("hrm_geojson/minigauge.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/minigauge.geojson", function(data) {
     mini_gaugeLayer.addData(data);
 });
 
-$.getJSON("hrm_geojson/museums.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/museums.geojson", function(data) {
     museumLayer.addData(data);
 });
 
-$.getJSON("hrm_geojson/organisations.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/organisations.geojson", function(data) {
     associationsLayer.addData(data);
 });
 
-$.getJSON("hrm_geojson/webcams.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/webcams.geojson", function(data) {
     webcamsLayer.addData(data);
 });
 
-$.getJSON("hrm_geojson/accomm.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/accomm.geojson", function(data) {
     accommodationLayer.addData(data);
 });
-$.getJSON("hrm_geojson/blogs.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/blogs.geojson", function(data) {
     blogsLayer.addData(data);
 });
 
-$.getJSON("hrm_geojson/services.geojson", function(data) {
+$.getJSON("https://www.heritagerailwaysmap.co.uk/hrm_geojson/services.geojson", function(data) {
     servicesLayer.addData(data);
 });
 
@@ -917,15 +919,15 @@ var searchControl = new L.Control.Search({
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 var overlays = {
-    "<img src='hrm_icons/hrm_na/icon_hrm_na_standard_gauge.png' height=22>&nbsp;Std Gauge": std_gaugeLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_narrow_gauge.png' height=22>&nbsp;Narr Gauge": narr_gaugeLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_miniature_railway.png' height=22>&nbsp;Mini Gauge": mini_gaugeLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_museum.png' height=22>&nbsp;Mini Museum": museumLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_railassoc.png' height=22>&nbsp;Association": associationsLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_railcams.png' height=22>&nbsp;Web Cams": webcamsLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_accommodation.png' height=22>&nbsp;Accommodation": accommodationLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_blognews.png' height=22>&nbsp;Blogs": blogsLayer,
-	"<img src='hrm_icons/hrm_na/icon_hrm_na_railassoc.png' height=22>&nbsp;Services": servicesLayer,
+    "<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_standard_gauge.png' height=22>&nbsp;Std Gauge": std_gaugeLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_narrow_gauge.png' height=22>&nbsp;Narr Gauge": narr_gaugeLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_miniature_railway.png' height=22>&nbsp;Mini Gauge": mini_gaugeLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_museum.png' height=22>&nbsp;Mini Museum": museumLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_railassoc.png' height=22>&nbsp;Association": associationsLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_railcams.png' height=22>&nbsp;Web Cams": webcamsLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_accommodation.png' height=22>&nbsp;Accommodation": accommodationLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_blognews.png' height=22>&nbsp;Blogs": blogsLayer,
+	"<img src='https://www.heritagerailwaysmap.co.uk/hrm_icons/hrm_na/icon_hrm_na_railassoc.png' height=22>&nbsp;Services": servicesLayer,
 	
 	 
 
@@ -1002,12 +1004,12 @@ map.addControl( new L.Control.Search({
         }); // end sponsor5 click
 
 function openMarkerPopup(id){
-    //var sponsorID = id; 
-    //alert(sponsorID);
-    var popup = L.popup()
-    .setLatLng([53.83120, -1.94869])
-    .setContent("I am a standalone popup.")
-    .openOn(map);
+    var sponsorID = id; 
+    alert(sponsorID);
+    //var popup = L.popup()
+    //.setLatLng([53.83120, -1.94869])
+    //.setContent("I am a standalone popup.")
+    //.openOn(map);
    // var popupData = geojsonFeature.features[44].properties.town;
     //alert(popupData);
 }    
