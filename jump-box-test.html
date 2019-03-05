@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<title>Heritage Railways Leaflet Map Example</title>
+	<link rel="stylesheet" href="hrm_css/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="hrm_css/leaflet.fullscreen.css">
+	<link rel="stylesheet" href="hrm_css/leaflet-search.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+	<link rel="stylesheet" href="hrm_css/bootstrap.min.css">
+    <link rel="stylesheet" href="hrm_css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="hrm_css/team-member.css" media="screen">
+    <link rel="stylesheet" href="hrm_css/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="hrm_css/animations.css" media="screen">
+    <link rel="stylesheet" href="hrm_css/prettyPhoto.css" media="screen">
+    <link rel="stylesheet" href="hrm_css/jquery.bxslider.css" media="screen">
+	<!-- Theme CSS -->
+      <link rel="stylesheet" href="hrm_css/hrm_css_241118.css">
+      <link rel="stylesheet" href="hrm_css/global.css">
+      <!-- Skin -->
+      <link rel="stylesheet" href="hrm_css/colors/black.css" class="colors">
+	
+	<script src="hrm_js/jquery-1.10.2.js"></script>
+	<script src="hrm_js/leaflet-search.js"></script>
+	<script src="hrm_js/Leaflet.fullscreen.js"></script>
+	<script src="hrm_js/Leaflet.fullscreen.min.js"></script>
+	<script src="hrm_js/leaflet.zoomhome.min.js"></script>
+	<script src="hrm_js/leaflet.zoomhome.js"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+<!-- Favicons -->
+    <link rel="shortcut icon" href="https://www.heritagerailwaysmap.co.uk/hr_engine_favicon.ico">
+	
+<style>
+
+#map {
+  float: left;
+  width: 100%;
+  height:600px;
+}
+
+   
+.leaflet-verticalcenter {
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+    top: 50%; /* possible because the placeholder's parent is the map */
+    transform: translateY(-50%); /* using the CSS3 Transform technique */
+    padding-top: 10px;
+}
+
+.leaflet-verticalcenter .leaflet-control {
+    margin-bottom: 10px;
+}
+
+</style>
+
+
+</head>
+<body data-spy="scroll" data-target="#navigation" data-offset="150" onload="initialise()">
+      <!-- Page Preloader -->
+       <div class="page-mask"><!-- Page Mask -->
+            <div class="page-loader"> <!-- Page Loader -->
+
+                <div class="spinner"></div>
+            </div> <!-- /Page Loader -->
+      </div><!-- /Page Mask -->
+      <!-- /Page Preloader -->
+
+     
+     <!-- Wrapper -->
+      <div class="wrap">
+            <!-- Header -->
+            <header id="section1" class="parallax-slider">
+                  <!-- Fullscreen Slider -->
+                  <div class="slider-container">
+                        <ul class="fullwidth-slider"><!-- fullwidth-slider removed from here text-slide-->
+                              <!-- Slide 1 -->
+                              <li class="slide" style="background-image: url(hrm_images/828_on_the_strathspey_railway.jpg)" data-anchor-target="section" data-70-top="background-position: center 400px;" data-start="background-position: center 0px;">
+                                    <div class="bg-overlay">
+                                          <!-- Caption -->
+                                          <div class="caption">
+                                                <div class="caption-inside" data-anchor-target="section"  data-start="top: 0px; opacity: 1;" data-200-top="top: 270px; opacity: 0;">
+                                                      <div class="slide-caption light">
+                                                            <div class="vertical-align-middle">     
+                                                                                          
+                                                                  <h2>HERITAGE RAILWAYS MAP</h2>
+                                                                  <p>
+                                                                        <h3>A comprehensive map of the Heritage Railways of Great Britain <br> displaying their location and information on railway related <br> places of interest around them. </h3>
+                                                                  </p>                                    
+                                                                 
+                                                      
+                                                               
+                                                            <div class="top-logo">  <!-- Top Logo -->
+                                          <div class="scrollNormal">
+                                                <a href="#section2">
+                                                      <img src="hrm_img/logo_welcome4.png" alt="Click here to scroll down" title="Click here to scroll down" width="140" height="140" >
+                                                </a>
+                                          </div>
+                                          <div class="scrollDown">
+                                                <a href="#section2">
+                                                      <img src="hrm_img/logo2_welcome2.png" alt="Click here to scroll down" title="Click here to scroll down" width="140" height="140">
+                                                </a>
+                                          </div> 
+                                    </div>  <!-- /Top Logo -->                              
+                                                              
+                                                              </div> 
+                                                      
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          <!--/Caption -->
+                                    </div>
+                                
+                              </li>
+                              <!--/Slide 1 -->
+                             
+
+                             
+                        </ul>
+                  </div>
+                  <!-- /Full Screen Slider -->
+			
+                     <div id="navigation"><!-- Navigation -->
+                        <nav class="navbar navbar-custom cl-effect-21" role="navigation"><!-- Nav Class -->
+                              <div class="container"><!-- Container -->
+                                    <div class="row"><!-- Row -->
+									
+                                          <div class="col-md-2 mob-logo"><!-- Col-md-2 -->
+                                                <div class="row"><!-- Row -->
+                                                      <div class="site-logo"><!-- Site Logo -->
+                                                            <a href="https://www.strathspeyrailway.co.uk"><img src="hrm_icons/hrm_misc_assets/sr_totem_120_35.png" alt="Click totem icon to view Strathspey Railway web site" title="Click totem icon to view Strathspey Railway web site" ></a>
+                                                      </div><!-- /Site Logo -->
+                                                </div><!-- /Row -->
+                                          </div><!-- /Col-md-2 -->
+                                          
+
+                                          <div class="col-md-10 mob-menu"><!-- Col-md-10 -->
+                                                <div class="row"><!-- Row -->
+                                                      <!-- Brand and toggle get grouped for better mobile display -->
+                                          <div class="navbar-header"><!-- Navbar-header -->
+                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                                                <i class="fa fa-bars"></i>
+                                                </button>
+                                          </div><!-- /Navbar-header -->
+                                                      <!-- Collect the nav links, forms, and other content for toggling -->
+                                                      <div class="collapse navbar-collapse" id="menu"><!-- Navbar-collapse -->
+                                                            <ul class="nav navbar-nav navbar-right">
+                                                                 
+                                                                 
+                                                                  <li><a href="#section3" data-toggle="collapse" data-target=".navbar-collapse">About</a>
+                                                                  <li><a href="#section4" data-toggle="collapse" data-target=".navbar-collapse">Map</a></li>
+								                                  <li><a href="#section5" data-toggle="collapse" data-target=".navbar-collapse">5025</a></li>
+							                                      <li><a href="#section6" data-toggle="collapse" data-target=".navbar-collapse">Footer</a></li>
+                                                                  
+                                                            </ul>
+                                                      </div><!-- Navbar-collapse -->
+                                                      
+                                                </div><!-- /Row -->
+												
+                                          </div><!-- /Col-md-10 -->
+										  
+                                    </div><!-- /Row -->
+									
+                              </div><!-- /Container -->
+                              
+                        </nav><!-- /Nav Class -->
+						
+                  </div> <!-- /Navigation -->
+                                            
+         
+         
+
+            <!-- Section 2 -->
+            <section id="section2" class="portfolio">
+                  <div class="row">
+               
+			          <div class="col-md-10 col-md-offset-1 text-center">
+                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 0959</b></h3>  
+                         
+                          <hr>
+                </div>
+            </div>
+
+                  <!-- Portfolio Wrap -->  
+                    <div id="portfolio-wrap8">
+                    
+                        <!-- Portfolio 1 -->                 
+                        <div class="portfolio-item8 one-four wordpress html css">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/ivatt_46512_aviemore_600_400.jpg" alt="Click on either web or map link buttons to view further information about the Strathspey Railway" title="Click on either web or map link buttons to view further information about the Strathspey Railway" >
+                                    <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+									<p><h5>
+                                          Strathspey Railway <br> Aviemore</h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="https://www.strathspeyrailway.co.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                        <span class="RoundBg8"><a href="mailto:info@strathspeyrailway.co.uk"><i class="fa fa-envelope"></i></a>
+                                        </span>
+					                    <span class="RoundBg8" id="sponsor1"><i class="fa fa-map-marker"></i>
+
+                                        </span>
+										 
+										 <p>
+                                         Click on above icons for<br>web, email & map links
+
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  1-->       
+                    
+                        <!-- Portfolio  2-->                 
+                        <div class="portfolio-item8 one-four php jquery">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/hrm_kwvr_600_400.jpg" alt="Click on either web or map link buttons to view further information about the Keighley &amp; Worth Valley Railway" title="Click on either web or map link buttons to view further information about the Keighley &amp; Worth Valley Railway">
+                                    <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+				                    <p><h5>
+                                          Keighley &amp; Worth <br> Valley Railway</h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="http://www.kwvr.co.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                       
+                                        <span class="RoundBg8" id="sponsor5"><i class="fa fa-map-marker"></i>
+					                  </span>	
+                                        <p>
+                                         Click on above icons for<br>web & map links
+
+                                        </p>
+									  
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  2-->      
+                        
+                        <!-- Portfolio  3-->                 
+                        <div class="portfolio-item8 one-four wordpress css html">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/hrm_svr_highley_station_600_400.jpg" alt="Click on either web or map link buttons to view further information about the Severn Valley Railway" title="Click on either web or map link buttons to view further information about the Severn Valley Railway">
+                                    <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+					                <p><h5>
+                                       Severn Valley <br> Railway</h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="http://www.svr.co.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                        
+					                    <span class="RoundBg8" id="sponsor6"><i class="fa fa-map-marker"></i>
+                                         </span>
+                                        	 <p>
+                                         Click on above icons for<br>web & map links
+
+                                        </p>				
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  3--> 
+                        
+                        <!-- Portfolio  4-->                 
+                        <div class="portfolio-item8 one-four branding jquery">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/hrm_nnr_weybourne_station_600_400.jpg" alt="Click on either web or map link buttons to view further information about the North Norfolk Railway" title="Click on either web or map link buttons to view further information about the North Norfolk Railway">
+                                   <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+					                <p><h5>
+                                          North Norfolk <br> Railway </h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="http://www.nnrailway.co.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                         
+					                    <span class="RoundBg8" id="sponsor7"><i class="fa fa-map-marker"></i>
+                                        </span>
+                                         <p>
+                                         Click on above icons for<br>web & map links
+
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  4--> 
+                               <!-- Portfolio 5 -->                 
+                        <div class="portfolio-item8 one-four wordpress html css">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/hrm_nymr_600_400.jpg" alt="Click on either web or map link buttons to view further information about the North Yorkshire Moors Railway" title="Click on either web or map link buttons to view further information about the North Yorkshire Moors Railway" >
+                                    <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+									<p><h5>
+                                          North Yorkshire <br> Moors Railway</h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="http://www.nymr.co.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                       
+					                    <span class="RoundBg8" id="sponsor12"><i class="fa fa-map-marker"></i>
+
+                                        </span>
+										 
+										 <p>
+                                         Click on above icons for<br>web & map links
+
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  5-->       
+                    
+                        <!-- Portfolio  6-->                 
+                        <div class="portfolio-item8 one-four php jquery">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/hrm_mnr_county_school_station_600_400.jpg" alt="Click on either web or map link buttons to view further information about the Mid Norfolk Railway" title="Click on either web or map link buttons to view further information about the Mid Norfolk Railway">
+                                    <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+				                    <p><h5>
+                                          Mid Norfolk <br>Railway</h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="http://www.mnr.org.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                       
+                                        <span class="RoundBg8" id="sponsor8"><i class="fa fa-map-marker"></i>
+					                 </span>
+									  <p>
+                                         Click on above icons for<br>web & map links
+
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  6-->      
+                        
+                        <!-- Portfolio  7-->                 
+                        <div class="portfolio-item8 one-four wordpress css html">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/hrm_ffr_foxfield_railway_station_steam_engines_600_400.jpg" alt="Click on either web or map link buttons to view further information about the Foxfield Railway" title="Click on either web or map link buttons to view further information about the Foxfield Railway">
+                                    <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+                                    <p><h5>
+                                       Foxfield<br> Railway</h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="http://www.foxfieldrailway.co.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                       
+					                    <span class="RoundBg8" id="sponsor9"><i class="fa fa-map-marker"></i>
+                                         </span>
+                                        	 <p>
+                                         Click on above icons for<br>web & map links
+
+                                        </p>				
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  7--> 
+                        
+                        <!-- Portfolio  8-->                 
+                        <div class="portfolio-item8 one-four branding jquery">
+                              <div class="img-holder8">
+                                    <img class="img-responsive" src="hrm_images/hrm_cvr_kingsley_froghall_station_600_400.jpg" alt="Click on either web or map link buttons to view further information about the Caledonian Railway" title="Click on either web or map link buttons to view further information about the Caledonian Railway">
+                                   <div class="img-overlay"></div>
+                                    <div class="overlay-effect">
+					                 <p><h5>
+                                          Churnet Valley  <br>Railway</h5>
+                                        </p>
+                                        <span class="RoundBg8"><a href="http://www.churnet-valley-railway.co.uk"><i class="fa fa-globe"></i></a>
+                                        </span>
+                                         
+					                    <span class="RoundBg8" id="sponsor11"><i class="fa fa-map-marker"></i>
+                                        </span>
+                                         <p>
+                                         Click on above icons for<br>web & map links
+
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Portfolio  8--> 
+                   </div>
+                  <!-- /Portfolio Wrap -->
+				   <p>Promoted Locations: Move over above images and click on icons for required web, e-mail and map links</p>
+            </section>
+            <!-- /Section 2 -->
+			
+			 
+<section id="section3" class="overview"><!-- section 3 -->
+    
+        <div class="container"><!-- container -->
+            
+            <div class="row"><!-- row -->
+               
+			   <div class="col-md-10 col-md-offset-1 text-center"><!-- col-md-10 -->
+                   
+                    <hr>
+                </div><!-- /col-md-10 -->
+            </div><!-- /row -->
+            
+			<div class="row"><!-- row -->
+                <div class="col-md-5 col-md-offset-1"><!-- col-md-5 -->
+                   <p>Welcome to heritagerailwaysmap.co.uk, a web site which accurately maps Heritage Railway locations with related web information, throughout Great Britain. </p>
+               
+                   <p>The map is populated with data collected by Volunteers of the Strathspey Railway, both for the benefit of Heritage Railway enthusiasts and for visitors who want to know where to go locally, for a great day out.</p>
+          
+                    <p>The map can be navigated using Google map controls together with additional controls which will assist you to;
+                    <li>	view by layer (by switching on or off the MAP MARKER CONTROL buttons on the right of the map)</li>
+                    <li>	view by specific local area (by selecting from the drop down AREA SELECTOR on the map)</li>
+                    <li>	SEARCH for locations</li>
+                    <li>	RESTORE the map to it's opening view</li>
+                    </p>	
+                    
+					 <p>We trust you will enjoy using this web site and welcome your feedback. Should you know of, or discover any other Heritage Railway locations that we have not yet plotted on the map and which are linked to information on the web, then please <a href="mailto:maps@strathspeyrailway.org.uk?subject=Heritage Railways Map">contact us.</a></p>
+					
+                       </div><!-- /col-md-5 -->
+                  
+           
+          
+                       <div class="col-md-5 col-md-offset-1 text-center"> <!-- col-md-5 -->
+			      <img class="img-rounded img-portfolio img-responsive" img src="hrm_images/locomotive_5619_north_norfolk.jpg"  alt="Steam Locomotive 5619 on the North Norfolk Railway" title="Steam Locomotive 5619 on the North Norfolk Railway" border="1" width="450px" height="300px">
+			
+			<p>&nbsp;	</p>	
+			      <img class="img-rounded img-portfolio img-responsive" img src="hrm_images/steam_locomotive_90733_kwvr.jpg"  alt="Steam Locomotive 90733 taking on water at Keighly Station" title="Steam Locomotive 90733 taking on water at Keighly Station" border="1" width="450px" height="300px">
+			</div><!-- /col-md-5 -->
+            </div><!-- /row -->
+     </div><!-- Container -->
+  
+ </section><!-- /Section 3 -->
+<section id="section4" class="locatory">	
+    
+        <div class="container"><!---Start of Container--->
+             
+			 
+			 <div class="row"><!---Start of Title Row--->
+               
+			     <div class="col-md-10 col-md-offset-1 text-center">
+                    <h3><b>HERITAGE RAILWAYS MAP</b></h3>
+                             </div><!---End of Title Column--->
+            
+			 </div><!---End of Title Row--->
+                    
+                    
+                  
+                          	<div class="row"><!---Start of Locatory Row--->
+		   
+                <div class="col-md-12"><!---Start of Map Column--->
+                   
+				<div id="map"></div>
+				<p>Click on Map Icons for More Location Information - <a href="https://www.heritagerailwaysmap.co.uk/contact.html">Please Report Any Broken Links or Additional Locations</a></p>
+	
+                </div><!---End of Map Column--->
+				</div><!---Start of Locatory Row--->
+				</div><!---End of Container--->
+ 
+</section>
+
+<section id="section5" class="overview"><!--  Section 5 -->
+    
+        <div class="container"><!-- container -->
+            
+           <div class="row">
+               
+			          <div class="col-md-10 col-md-offset-1 text-center">
+                          <h3><b>5025 - THE OLDEST SURVIVING LMS BLACK 5 STEAM LOCOMOTIVE</b></h3>
+                          <hr>
+                </div>
+            </div>
+            
+			<div class="row"><!-- row -->
+                <div class="col-md-5 col-md-offset-1"><!-- col-md-5 -->
+                   <p>Work on the overhaul of 5025 began at the beginning of 2012, in Loco Shed 60B, Aviemore. This was thanks to grants or promises of support from the <a href="http://strathspeyrailway.co.uk">Strathspey Railway Company Limited</a>, the Strathspey Railway Trust, the Heritage Lottery Fund the Strathspey Railway Association and the significant amount which had already been raised from our supporters though appeals.</p>
+               
+                   <p>Major progress has been made on the locomotive and tender frames, axleboxes, motion, dragboxes and valve gear at Aviemore and on the major rebuild of the boiler, reprofiling of the tyres of the locomotive and tender wheels and construction of a new tender tank at Riley Engineering of Bury. Work has also included the casting and machining of a pair of new cylinders.</p>
+          
+                    <p><a href="http://thewatkinsontrust.blogspot.co.uk">The WEC Watkinson Trust</a> originally hoped to return 5025 to service in 2015, however owing to the amount of work needed, a more realistic aim is for completion is towards the middle / end of 2018. To achieve this further donations to the WEC Watkinson Trust will be welcomed by our treasurer: <b>WAD Macphail CA, ‘Ardneil’, 80 Bruceland Road, Elgin, Moray, IV30 1SP</b>. </p>	
+                    
+					
+					
+                       </div><!-- /col-md-5 -->
+                  
+           
+          
+                       <div class="col-md-5 col-md-offset-1 text-center"> <!-- col-md-5 -->
+			      <img class="img-rounded img-portfolio img-responsive" img src="hrm_images/Steam_Locomotive_5025_outside_Aviemore_shed_60b.jpg" alt="The world's oldest Black Five steam locomotive in preservation number 5025 outside the most northerly steam shed in Britain 60B" title="The world's oldest Black Five steam locomotive in preservation number 5025 outside the most northerly steam shed in Britain 60B" border="1" width="450" height="450" >
+			<p>&nbsp;</p>
+			<p><b>
+			You can now donate online by clicking the Paypal Button </b><br>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HTFZL8MR9T75S">
+<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+			
+			</p>
+			
+			</div><!-- /col-md-5 -->
+            </div><!-- /row -->
+     </div><!-- Container -->
+  
+ </section> <!-- /Section 5 -->
+ <div class="center-div">
+						
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- WHATS-THERE-RESPONSIVE -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5473482841083530"
+     data-ad-slot="1361823302"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>		
+	</div>			
+ 
+<section id="section6" class="footer"><!-- Section 6 -->
+               
+
+                  <footer class="footer-wrap text-center">
+                        <div class="container">
+                              <div class="row"><!--row-->
+	
+	    <div class="col-md-2"><!--col-md-2-->
+        <a href="https://www.strathspeyrailway.co.uk"><img src="hrm_icons/hrm_footer/sra_icon_50.png" alt="Click on icon or text to activate link to the Strathspey Railway Assoication web site" title="Click on icon or text to activate link to the Strathspey Railway Assoication web site"></a><br>
+        
+		<a href="https://www.strathspeyrailway.co.uk">SR</a>
+		</div><!--/col-md-2-->
+		
+		<div class="col-md-2"><!--col-md-2-->
+		<a href="https://www.heritagerailwaysmap.co.uk/volunteers.html"><img src="hrm_icons/hrm_footer/volunteers_icon_50.png" alt="Click on icon or text to view information on Volunteering " title="Click on icon or text to view information on Volunteering"></a><br>
+        
+		<a href="https://www.heritagerailwaysmap.co.uk/volunteers.html">VOLUNTEERS</a>
+		</div><!--/col-md-2-->
+		
+   
+		<div class="col-md-2"><!--col-md-2-->
+		<a href="https://www.heritagerailwaysmap.co.uk/links.html"><img src="hrm_icons/hrm_footer/links2_footer_icon_50.png" alt="Click on icon or text to view useful Links " title="Click on icon or text to view useful Links"></a><br>
+        
+		<a href="https://www.heritagerailwaysmap.co.uk/links.html">LINKS</a>
+		</div><!--/col-md-2-->
+		
+		<div class="col-md-2"><!--col-md-2-->
+		<a href="mailto:maps@strathspeyrailway.org.uk?subject=Heritage Railways Map"><img src="hrm_icons/hrm_footer/e-mail_icon_50.png" alt="Click on icon or text to activate e-mail link" title="Click on icon or text to activate e-mail link"></a><br>
+
+        <a href="mailto:maps@strathspeyrailway.org.uk?subject=Heritage Railways Map">E-MAIL</a>
+        </div><!--/col-md-2-->
+		
+		<div class="col-md-2"><!--col-md-2-->
+		<a href="https://www.heritagerailwaysmap.co.uk/terms.html"><img src="hrm_icons/hrm_footer/tandc_footer_icon_50.png" alt="Click on icon or text to view the Terms and Conditions for using this web site" title="Click on icon or text to view the Terms and Conditions for using this web site"></a><br>
+        
+		<a href="https://www.heritagerailwaysmap.co.uk/terms.html">TERMS & CONDITIONS</a>
+		</div><!--/col-md-2-->
+		
+           
+        
+		
+       <div class="col-md-2"><!--col-md-2-->
+	   <img src="hrm_icons/hrm_footer/intamap_footer_icon_50.png"><br>
+	   
+       <p style="font-family:Helvetica,Verdana,Arial,sans-serif; color:#337AB7; font-size: 1.0em ;">&#169; INTAMAP 2018</p>
+       </div><!--/col-md-2-->
+	
+                                  
+                        </div><!--/row-->
+					 </div><!--/container--> 	
+                  </footer><!-- /footer -->
+            </section> <!-- /Section 6 -->
+           
+
+            <!-- Scroll To Top --> 
+            <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>      
+      </div>
+      <!-- /Wrapper -->
+</section>
+
+
+      
+            
+     
+
+<script>
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//setting up the map//
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// initialize map
+var map = L.map('map',{zoomControl: false}).setView([57.18842,-3.82869], 7);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//set up Control Placeholders//
+////////////////////////////////////////////////////////////////////////////////////////////
+    
+	// Create additional Control placeholders
+    function addControlPlaceholders(map) {
+      var corners = map._controlCorners,
+        l = 'leaflet-',
+        container = map._controlContainer;
+
+      function createCorner(vSide, hSide) {
+        var className = l + vSide + ' ' + l + hSide;
+
+        corners[vSide + hSide] = L.DomUtil.create('div', className, container);
+      }
+
+      createCorner('verticalcenter', 'left');
+      createCorner('verticalcenter', 'right');
+    }
+    addControlPlaceholders(map);
+	
+	// Locate User Control 
+	
+	var Loc = L.control.locate({
+    position: 'verticalcenterleft' }).addTo(map);
+	
+	// Fullscreen Control 
+	
+    map.addControl(new L.Control.Fullscreen({
+    position: 'verticalcenterleft' }));
+	
+		
+    // Zoom Control 
+    var zoomHome = L.Control.zoomHome({position:'verticalcenterleft'});
+    zoomHome.addTo(map);
+	
+	
+  
+
+   
+	
+	// Scale display 
+	
+    L.control.scale({
+      position: 'bottomleft'
+    }).addTo(map);
+	
+	
+
+   
+
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY3VwbG9rIiwiYSI6ImNqa3NqcTVpZjAxZnUzcnIzOGJnMjVxbW4ifQ.UmqqDHa3zuTvRdbkIXpuIg', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(map);
+
+
+	
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//styling and popups//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var myIcon = L.icon({
+    iconUrl: 'hrm_icons/hrm_lc/sr-map-icon.png',
+    iconSize: [35, 40],
+    iconAnchor: [17,40],
+    popupAnchor: [0, -40],
+    
+});
+    L.marker([57.250424, -3.751325], {icon: myIcon}).bindTooltip("STRATHSPEY RAILWAY").addTo(map);
+		
+	
+//create icons
+var std_gauge = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_standard_gauge.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+
+var narr_gauge = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_narrow_gauge.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+  
+var mini_gauge = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_miniature_railway.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});  
+  
+var museums = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_museum.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+
+var associations = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_railassoc.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+
+var webcams = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_railcams.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+
+var accommodation = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_accommodation.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+
+var blogs = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_blognews.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+
+var services = L.icon({
+  iconUrl: 'hrm_icons/hrm_wa/icon_hrm_wa_railassoc.png',
+  iconSize: [22, 25],
+  iconAnchor:   [11, 25],
+  popupAnchor:  [0, -25]
+});
+
+//create markers with different icons
+function getstd_gaugeMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: std_gauge
+  });
+}
+
+function getnarr_gaugeMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: narr_gauge
+  });
+}
+
+function getmini_gaugeMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: mini_gauge
+  });
+}
+function getmuseumsMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: museums
+  });
+}
+
+function getassociationsMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: associations
+  });
+}
+
+function getwebcamsMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: webcams
+  });
+}
+
+function getaccommodationMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: accommodation
+  });
+}
+
+function getblogsMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: blogs
+  });
+}
+
+function getservicesMarker(feature, latlng) {
+  return L.marker(latlng, {
+    icon: services
+  });
+}
+
+
+
+
+//attach tooltips to the markers
+function oneachfeature2(feature, layer) {          
+                   layer.bindTooltip("<strong>" + feature.properties.name + "</strong>");
+                   layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + "<a target = _blank href=" +
+                feature.properties.url + ">" + feature.properties.url + "</a>").openPopup();
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//displaying the data//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//create empty GeoJSON layers to be populated later
+var std_gaugeLayer = L.geoJson(false, {
+    pointToLayer: getstd_gaugeMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);	
+
+var narr_gaugeLayer = L.geoJson(false, {
+    pointToLayer: getnarr_gaugeMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);
+	
+var mini_gaugeLayer = L.geoJson(false, {
+    pointToLayer: getmini_gaugeMarker,
+   onEachFeature: oneachfeature2
+	
+	}).addTo(map);
+
+var museumLayer = L.geoJson(false, {
+    pointToLayer: getmuseumsMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);	
+	
+var associationsLayer = L.geoJson(false, {
+    pointToLayer: getassociationsMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);
+
+var webcamsLayer = L.geoJson(false, {
+    pointToLayer: getwebcamsMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);
+
+var accommodationLayer = L.geoJson(false, {
+    pointToLayer: getaccommodationMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);	
+	
+var blogsLayer = L.geoJson(false, {
+    pointToLayer: getblogsMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);	
+	
+var servicesLayer = L.geoJson(false, {
+    pointToLayer: getservicesMarker,
+    onEachFeature: oneachfeature2
+	
+	}).addTo(map);	
+
+	
+//populate GeoJSON layers with data from external files
+$.getJSON("hrm_geojson/stdgauge.geojson", function(data) {
+    std_gaugeLayer.addData(data);
+});
+
+
+$.getJSON("hrm_geojson/narrgauge.geojson", function(data) {
+    narr_gaugeLayer.addData(data);
+});
+
+$.getJSON("hrm_geojson/minigauge.geojson", function(data) {
+    mini_gaugeLayer.addData(data);
+});
+
+$.getJSON("hrm_geojson/museums.geojson", function(data) {
+    museumLayer.addData(data);
+});
+
+$.getJSON("hrm_geojson/organisations.geojson", function(data) {
+    associationsLayer.addData(data);
+});
+
+$.getJSON("hrm_geojson/webcams.geojson", function(data) {
+    webcamsLayer.addData(data);
+});
+
+$.getJSON("hrm_geojson/accomm.geojson", function(data) {
+    accommodationLayer.addData(data);
+});
+$.getJSON("hrm_geojson/blogs.geojson", function(data) {
+    blogsLayer.addData(data);
+});
+
+$.getJSON("hrm_geojson/services.geojson", function(data) {
+    servicesLayer.addData(data);
+});
+
+var hrmLayer = L.layerGroup([std_gaugeLayer, narr_gaugeLayer, mini_gaugeLayer, museumLayer, associationsLayer, webcamsLayer, accommodationLayer, blogsLayer, servicesLayer]);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//search control//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+var searchControl = new L.Control.Search({
+		layer: hrmLayer, 
+		propertyName: 'name',
+		marker: false,
+		moveToLocation: function(latlng) {
+			console.log(latlng +" Coordinates");
+  			map.setView(latlng, 14); // set the zoom
+			
+			}
+	});
+	
+	map.addControl( searchControl );  //initialise search control
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//layer control//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+var overlays = {
+    "<img src='hrm_icons/hrm_na/icon_hrm_na_standard_gauge.png' height=22>&nbsp;Std Gauge": std_gaugeLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_narrow_gauge.png' height=22>&nbsp;Narr Gauge": narr_gaugeLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_miniature_railway.png' height=22>&nbsp;Mini Gauge": mini_gaugeLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_museum.png' height=22>&nbsp;Mini Museum": museumLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_railassoc.png' height=22>&nbsp;Association": associationsLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_railcams.png' height=22>&nbsp;Web Cams": webcamsLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_accommodation.png' height=22>&nbsp;Accommodation": accommodationLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_blognews.png' height=22>&nbsp;Blogs": blogsLayer,
+	"<img src='hrm_icons/hrm_na/icon_hrm_na_railassoc.png' height=22>&nbsp;Services": servicesLayer,
+	
+	 
+
+	 };	
+	  
+	  // Layers Control 
+
+var layerbox = L.control.layers(null, overlays, {position: 'verticalcenterleft'}, {collapsed: true} ).addTo(map);
+
+      // Address Search Control 
+
+map.addControl( new L.Control.Search({
+		url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
+		jsonpParam: 'json_callback',
+		propertyName: 'display_name',
+		propertyLoc: ['lat','lon'],
+		marker: false,
+		autoCollapse: true,
+		autoType: false,
+		position: 'verticalcenterleft',
+		minLength: 2
+	}) );
+
+</script>
+
+<script>
+// start map links from images
+
+ $('#sponsor1').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  
+  
+	map.flyTo([48.8, 2.4], 10, {
+        animate: true,
+        duration: 4
+        }); // end fly to
+  
+   });
+        
+                                                                     
+ $('#sponsor2').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  map.flyTo([-3.13119, 57.45805], 14, {
+        animate: true,
+        duration: 4
+        }); // end fly to
+	openMarkerPopup('44');  
+   });
+   
+   
+function openMarkerPopup(id){
+    var sponsorID = id; 
+    alert(sponsorID);
+}    
+
+   
+   
+   
+        
+   $('#sponsor3').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "royaldeeside-railway-crathes";
+  showSponsorOnMap2(currentSponsor)
+        });      
+        
+    $('#sponsor4').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "caledonian-railway-brechin";
+  showSponsorOnMap2(currentSponsor)
+        });     
+        
+     $('#sponsor5').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  map.flyTo([53.83120,-1.94869], 14, {
+        animate: true,
+        duration: 4
+        }); // end fly to
+		
+		
+function openMarkerPopup-old(id){
+    geojson.std_gaugeLayer(function(feature){
+        if(feature.feature.properties.id==44){
+            feature.openPopup();
+        }
+    
+    });
+}    
+
+		
+		
+		
+		
+		//geojson.std_gaugeLayer(function(feature){ //geojson is the object which have your data
+
+    //if(feature.feature.properties.id=='44'){ //insert the id in place of 'required-id'
+        //feature.openPopup(); //open popup for matching ID
+    //}
+    //remove the below line if you have multiple features with same ID
+    //break;//exit loop once it opens the popup
+  // });
+		
+		
+		
+	
+   });
+        
+     $('#sponsor6').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "severnvalley-railway-bewdley";
+  showSponsorOnMap2(currentSponsor)
+        });    
+        
+     $('#sponsor7').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "northnorfolk-railway-sheringham";
+  showSponsorOnMap2(currentSponsor)
+        });
+        
+   $('#sponsor8').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "midnorfolk-railway-dereham";
+  showSponsorOnMap2(currentSponsor)
+        });      
+        
+     $('#sponsor9').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "foxfield-railway-forsbrook";
+  showSponsorOnMap2(currentSponsor)
+        });    
+        
+     $('#sponsor10').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "wensleydale-railway-northallerton";
+  showSponsorOnMap2(currentSponsor)
+        });
+        
+      $('#sponsor11').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "churnetvalley-railway-cheddleton";
+  showSponsorOnMap2(currentSponsor)
+        }); 
+     
+     $('#sponsor12').click(function(){
+  $.scrollTo($("#section4"), 1000);
+  var currentSponsor = "themoors-railway-pickering";
+  showSponsorOnMap2(currentSponsor)
+        });       
+        
+       
+                
+ function showSponsorOnMap2(whichSponsor) {
+
+
+    // go to marker and infowindow on map 
+    // as identified by xml doorcode passed as argument
+
+    // go through array of markers until find right one
+    // then go map location and open infowindow
+    // after which break out of for loop so that don't waste time searching
+    // thro' loop when no longer needed
+    var currentID = whichSponsor;
+    for (var x = 0; x < markers.length; x++) {
+        m = markers[x];
+            if (currentID == m.doorcode) {
+                // set map centre to lat long of sponsor and adjust zoom
+                reset_map(m.lat, m.long, 14, 'offset')
+
+                // open sponsor's infowindow
+				popup.setContent(m.html);
+                //infoWindow.setContent(m.html);
+				marker.openPopup(map, m);
+                //infoWindow.open(map, m);
+            break; // 6 to 2500 ms without break, 4 to 7 ms with!
+            }
+    } // end for loop
+    //console.timeEnd("start loop");
+} // end function showSponsorOnMap2
+
+  // end map links from images
+ </script>
+      <script type="text/javascript" src="hrm_js/markerwithlabel_packed.js"></script>
+	  <script src="hrm_js/jquery-migrate-1.4.1.js"></script>
+      <script src="hrm_js/jquery-ui.js"></script>
+      <script src="hrm_js/bootstrap.min.js"></script>
+      <script src="hrm_js/transition.js"></script>
+      <script src="hrm_js/jquery.parallax.js"></script>
+      <script src="hrm_js/skrollr.min.js"></script>
+      <script src="hrm_js/jquery.hparallax.js"></script>
+      <script src="hrm_js/jquery.wait.js"></script> 
+      <script src="hrm_js/appear.js"></script>
+      <script src="hrm_js/fappear.js"></script>  
+      <script src="hrm_js/modernizr-2.6.2.min.js"></script>
+      <script src="hrm_js/jquery.bxslider.min.js"></script>
+      <script src="hrm_js/jquery.maximage.js"></script>
+      <script src="hrm_js/jquery.cycle.all.js"></script>
+      <script src="hrm_js/jquery.prettyPhoto.js"></script>
+      <script src="hrm_js/jquery.sticky.js"></script>
+      <script src="hrm_js/jquery.isotope.js"></script>
+      <script src="hrm_js/imagesloaded.pkgd.min.js"></script>
+      <script src="https://www.ourrailway.org/our_js/jquery.scrollTo.min.js"></script>
+      <script src="hrm_js/jquery.nav.js"></script>
+      <script src="hrm_js/wow.js"></script>
+      <script src="hrm_js/tytabs.js"></script>
+      <script src="hrm_js/hrm_hrm84.js"></script>
+</body>
+</html>
