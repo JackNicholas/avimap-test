@@ -179,7 +179,7 @@
                   <div class="row">
                
 			          <div class="col-md-10 col-md-offset-1 text-center">
-                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 0959</b></h3>  
+                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1029</b></h3>  
                          
                           <hr>
                 </div>
@@ -972,14 +972,9 @@ map.addControl( new L.Control.Search({
         animate: true,
         duration: 4
         }); // end fly to
-	openMarkerPopup('44');  
    });
    
    
-function openMarkerPopup(id){
-    var sponsorID = id; 
-    alert(sponsorID);
-}    
 
    
    
@@ -1003,16 +998,24 @@ function openMarkerPopup(id){
         animate: true,
         duration: 4
         }); // end fly to
-		
-		
-function openMarkerPopup-old(id){
-    geojson.std_gaugeLayer(function(feature){
-        if(feature.feature.properties.id==44){
-            feature.openPopup();
-        }
-    
-    });
+        openMarkerPopup('44');  
+        }); // end sponsor5 click
+
+function openMarkerPopup(id){
+    var sponsorID = id; 
+    alert(sponsorID);
 }    
+
+		
+		
+//function openMarkerPopup-old(id){
+  //  geojson.std_gaugeLayer(function(feature){
+    //    if(feature.feature.properties.id==44){
+      //      feature.openPopup();
+        //}
+    
+//    });
+//}    
 
 		
 		
