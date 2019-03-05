@@ -179,7 +179,7 @@
                   <div class="row">
                
 			          <div class="col-md-10 col-md-offset-1 text-center">
-                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1049</b></h3>  
+                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1108</b></h3>  
                          
                           <hr>
                 </div>
@@ -1002,10 +1002,14 @@ map.addControl( new L.Control.Search({
         }); // end sponsor5 click
 
 function openMarkerPopup(id){
-    var sponsorID = id; 
+    //var sponsorID = id; 
     //alert(sponsorID);
-    var popupData = geojsonFeature.features[44].properties.town;
-    alert(popupData);
+    var popup = L.popup()
+    .setLatLng([53.83120, -1.94869])
+    .setContent("I am a standalone popup.")
+    .openOn(map);
+   // var popupData = geojsonFeature.features[44].properties.town;
+    //alert(popupData);
 }    
 
 		
