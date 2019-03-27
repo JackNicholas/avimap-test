@@ -179,7 +179,7 @@
                   <div class="row">
                
 			          <div class="col-md-10 col-md-offset-1 text-center">
-                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1331</b></h3>  
+                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1355</b></h3>  
                          
                           <hr>
                 </div>
@@ -1024,6 +1024,8 @@ var currentSponsorLat;
 var currentSponsorLong;
 var currentSponsorPopup;
 
+var currentSponsorMarker; 
+
 function openMarkerPopup(jumpID){
 
 	switch(jumpID)
@@ -1049,16 +1051,16 @@ function openMarkerPopup(jumpID){
     
     $.scrollTo($("#section4"), 1000); 
     
+    currentSponsorMarker = L.marker([currentSponsorLat, currentSponsorLong]).addTo(map);
+    
     map.flyTo([currentSponsorLat,currentSponsorLong], 14, {
         animate: true,
         duration: 4
         }); // end fly to
         
- 	var popup = L.popup()
-    	.setLatLng([currentSponsorLat, currentSponsorLong])
-        .setContent('currentSponsorPopup.')
-        .openOn(map);
+    currentSponsorMarker.bindPopup(currentSponsorPopup).openPopup();
         
+ 	    
 }    
 
  
