@@ -179,7 +179,7 @@
                   <div class="row">
                
 			          <div class="col-md-10 col-md-offset-1 text-center">
-                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1128</b></h3>  
+                          <h3><b>HERITAGE RAILWAYS AROUND GREAT BRITAIN test 1331</b></h3>  
                          
                           <hr>
                 </div>
@@ -957,136 +957,113 @@ map.addControl( new L.Control.Search({
 // start map links from images
 
  $('#sponsor1').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  
-  
-	map.flyTo([48.8, 2.4], 10, {
-        animate: true,
-        duration: 4
-        }); // end fly to
-  
+  openMarkerPopup('sponsor1');  
    });
         
                                                                      
  $('#sponsor2').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  map.flyTo([-3.13119, 57.45805], 14, {
-        animate: true,
-        duration: 4
-        }); // end fly to
+	openMarkerPopup('sponsor2');  
    });
-   
-   
-
-   
-   
    
         
    $('#sponsor3').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "royaldeeside-railway-crathes";
-  showSponsorOnMap2(currentSponsor)
+openMarkerPopup('sponsor3');  
         });      
         
     $('#sponsor4').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "caledonian-railway-brechin";
-  showSponsorOnMap2(currentSponsor)
+openMarkerPopup('sponsor4');  
         });     
         
      $('#sponsor5').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  map.flyTo([53.83120,-1.94869], 14, {
-        animate: true,
-        duration: 4
-        }); // end fly to
-        openMarkerPopup('44');  
-        }); // end sponsor5 click
-
-function openMarkerPopup(id){
-    var sponsorID = id; 
-    alert(sponsorID);
-    //var popup = L.popup()
-    //.setLatLng([53.83120, -1.94869])
-    //.setContent("I am a standalone popup.")
-    //.openOn(map);
-   // var popupData = geojsonFeature.features[44].properties.town;
-    //alert(popupData);
-}    
-
-		
-		
-//function openMarkerPopup-old(id){
-  //  geojson.std_gaugeLayer(function(feature){
-    //    if(feature.feature.properties.id==44){
-      //      feature.openPopup();
-        //}
-    
-//    });
-//}    
-
-		
-		
-		
-		
-		//geojson.std_gaugeLayer(function(feature){ //geojson is the object which have your data
-
-    //if(feature.feature.properties.id=='44'){ //insert the id in place of 'required-id'
-        //feature.openPopup(); //open popup for matching ID
-    //}
-    //remove the below line if you have multiple features with same ID
-    //break;//exit loop once it opens the popup
-  // });
-		
-		
-		
-	
- //  });
+        openMarkerPopup('sponsor5');  
+        }); // end sponsor5 click note this is the second jump box
         
      $('#sponsor6').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "severnvalley-railway-bewdley";
-  showSponsorOnMap2(currentSponsor)
-        });    
+  openMarkerPopup('sponsor6');  
+        });    // this is the third jump box
         
      $('#sponsor7').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "northnorfolk-railway-sheringham";
-  showSponsorOnMap2(currentSponsor)
+  openMarkerPopup('sponsor7');  
         });
         
    $('#sponsor8').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "midnorfolk-railway-dereham";
-  showSponsorOnMap2(currentSponsor)
+openMarkerPopup('sponsor8');  
         });      
         
      $('#sponsor9').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "foxfield-railway-forsbrook";
-  showSponsorOnMap2(currentSponsor)
+openMarkerPopup('sponsor9');  
         });    
         
      $('#sponsor10').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "wensleydale-railway-northallerton";
-  showSponsorOnMap2(currentSponsor)
+openMarkerPopup('sponsor10');  
         });
         
       $('#sponsor11').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "churnetvalley-railway-cheddleton";
-  showSponsorOnMap2(currentSponsor)
+openMarkerPopup('sponsor11');  
         }); 
      
      $('#sponsor12').click(function(){
-  $.scrollTo($("#section4"), 1000);
-  var currentSponsor = "themoors-railway-pickering";
-  showSponsorOnMap2(currentSponsor)
+openMarkerPopup('sponsor12');  
         });       
         
+ 
+ // on getting jumpID, use switch to set current lat long and content to relevant sponsor
+// then fly to, then create and open popul    
+    
+var sponsor01Lat = 48.8;
+var sponsor01Long = 2.4;
+var sponsor01Popup = "this is sponsor 1 popup from first jumpbox";
+var sponsor05Lat = 53.83120;
+var sponsor05Long = -1.94869;
+var sponsor05Popup = "this is sponsor 5 popup from second jumpbox";
+var sponsor06Lat = 57.45805;
+var sponsor06Long = -3.13119;
+var sponsor06Popup = "this is sponsor 6 popup from third jumpbox";
+
+var currentSponsorLat;
+var currentSponsorLong;
+var currentSponsorPopup;
+
+function openMarkerPopup(jumpID){
+
+	switch(jumpID)
+	    {
+	    case 'sponsor1':
+	    currentSponsorLat = sponsor01Lat; 
+	    currentSponsorLong = sponsor01Long;
+	    currentSponsorPopup = sponsor01Popup;
+	      break;        
+	    case 'sponsor5':
+	    currentSponsorLat = sponsor05Lat; 
+	    currentSponsorLong = sponsor05Long;
+	    currentSponsorPopup = sponsor05Popup;
+	      break;
+	    case 'sponsor6':
+	    currentSponsorLat = sponsor06Lat; 
+	    currentSponsorLong = sponsor06Long;
+	    currentSponsorPopup = sponsor06Popup;
+	      break;
+	    default:
+	    alert('id not recognised'); 
+	    }
+    
+    $.scrollTo($("#section4"), 1000); 
+    
+    map.flyTo([currentSponsorLat,currentSponsorLong], 14, {
+        animate: true,
+        duration: 4
+        }); // end fly to
+        
+ 	var popup = L.popup()
+    	.setLatLng([currentSponsorLat, currentSponsorLong])
+        .setContent('currentSponsorPopup.')
+        .openOn(map);
+        
+}    
+
+ 
        
-                
+ // not using this now while test quick and dirty above               
  function showSponsorOnMap2(whichSponsor) {
 
 
