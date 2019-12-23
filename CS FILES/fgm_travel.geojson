@@ -1,0 +1,449 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+			{"type": "Feature", "id": 1, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "dd1dundeeairport",
+				"name": "Dundee Airport",
+				"address": "Riverside Drive",
+				"town": "Dundee",
+				"postcode": "DD2 1UH",
+				"category": "golf_travel",
+				"phone": "+44 (0)1382 662200",
+				"email": "info@hial.co.uk",
+				"url": "http://www.hial.co.uk/dundee-airport/",
+				"lat": "56.45411",
+				"long": "-3.01546",
+				"image": "awaiting_image_dgh.png"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.01546,56.45411]}
+                },
+			{"type": "Feature", "id": 2, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "eh12edinburghairport",
+				"name": "Edinburgh Airport",
+				"address": "Turnberry",
+				"town": "Edinburgh",
+				"postcode": "EH12",
+				"category": "golf_travel",
+				"phone": "+44 (0)844 481 8989",
+				"email": "N/K",
+				"url": "https://www.edinburghairport.com",
+				"lat": "55.94794",
+				"long": "-3.36480",
+				"image": "awaiting_image_dgh.png"
+			       },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.36480,55.94794]}
+                },
+			{"type": "Feature", "id": 3, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "dd1rsdundee",
+				"name": "Dundee Railway Station",
+				"address": "South Union Street",
+				"town": "Dundee",
+				"postcode": "DD1 4BY",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/dee/details.html",
+				"image": "dundee_dundeers_176_132.png",
+				"lat": "56.45758",
+				"long": "-2.96958"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.96958,56.45758]}
+                },
+			{"type": "Feature", "id": 4, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "dd1aclarkcarhire",
+				"name": "Arnold Clark Car Hire - Dundee",
+				"address": "East Dock Street",
+				"town": "Dundee",
+				"postcode": "DD1 3HB",
+				"category": "golf_travel",
+				"phone": "+44 (0)1382 225382",
+				"email": "N/K",
+				"url": "https://www.arnoldclarkrental.com",
+				"image": "dundee_arnoldclarkcarhire_0211_web.png",
+				"lat": "56.46211",
+				"long": "-2.96289"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.96289,56.46211]}
+                },
+			{"type": "Feature", "id": 5, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "dd1enterprisecarhire",
+				"name": "Enterprise Car Hire - Dundee",
+				"address": "131 Seagate",
+				"town": "Dundee",
+				"postcode": "DD1 2HW",
+				"category": "golf_travel",
+				"phone": "+44 (0)1382 205040",
+				"email": "N/K",
+				"url": "https://www.enterprise.co.uk/en/home.html",
+				"image": "dundee_enterprisecarhire_0211_web.png",
+				"lat": "56.46370",
+				"long": "-2.96515"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.96515,56.46370]}
+                },
+			{"type": "Feature", "id": 6, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky16rsleuchars",
+				"name": "Leuchars Railway Station",
+				"address": "Junction Road",
+				"town": "Leuchars",
+				"postcode": "KY16",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/leu/details.html",
+				"image": "leuchars_leucharsrs_176_132.png",
+				"lat": "56.37528",
+				"long": "-2.89342"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.89342,56.37528]}
+                },
+			{"type": "Feature", "id": 7, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky4rscowdenbeath",
+				"name": "Cowdenbeath Railway Station",
+				"address": "Station Road",
+				"town": "Cowdenbeath",
+				"postcode": "KY4 9SG ",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/cow/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.11169",
+				"long": "-3.34340"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.34340,56.11169]}
+                },
+			{"type": "Feature", "id": 8, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "ky15rscupar",
+				"name": "Cupar Railway Station",
+				"address": "Station Road",
+				"town": "Cupar",
+				"postcode": "KY15",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/cup/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.317336",
+				"long": "-3.008974"
+			    },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.008974,56.317336]}
+                },
+			{"type": "Feature", "id": 9, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky11rsdalgetybay",
+				"name": "Dalgety Bay Railway Station",
+				"address": "Main Street",
+				"town": "Dalgety Bay",
+				"postcode": "KY11",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/dag/details.html",
+				"image": "dalgetybay_ky11rsdalgetybay_176_132.png",
+				"lat": "56.04224",
+				"long": "-3.36714"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.36714,56.04224]}
+                },
+			{"type": "Feature", "id": 10, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "ky12rsdunfermline",
+				"name": "Dunfermline Railway Station",
+				"address": "Dunfermline Town",
+				"town": "Dunfermline",
+				"postcode": "KY12 7HT",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/dfe/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.068293",
+				"long": "-3.452567"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.452567,56.068293]}
+                },
+			{"type": "Feature", "id": 11, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky11rsinverkeithing",
+				"name": "Inverkeithing Railway Station",
+				"address": "Chapel Street",
+				"town": "Inverkeithing",
+				"postcode": "KY11",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/ink/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.03523",
+				"long": "-3.39552"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.39552,56.03523]}
+                },
+			{"type": "Feature", "id": 12, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky1rskirkcaldy",
+				"name": "Kirkcaldy Railway Station",
+				"address": "Station Road",
+				"town": "Kirkcaldy",
+				"postcode": "KY1",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/kdy/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.11213",
+				"long": "-3.16727"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.16727,56.11213]}
+                },
+			{"type": "Feature", "id": 13, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky15rsladybank",
+				"name": "Ladybank Railway Station",
+				"address": "Commercial Road",
+				"town": "Ladybank",
+				"postcode": "KY15",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/ldy/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.27436",
+				"long": "-3.12178"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.12178,56.27436]}
+                },
+			{"type": "Feature", "id": 14, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky5rslochgelly",
+				"name": "Lochgelly Railway Station",
+				"address": "Station Road",
+				"town": "Lochgelly",
+				"postcode": "KY5",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/lcg/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.13496",
+				"long": "-3.31302"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.31302,56.13496]}
+                },
+			{"type": "Feature", "id": 15, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "ky7rsmarkinch",
+				"name": "Markinch Railway Station",
+				"address": "High Street",
+				"town": "Markinch",
+				"postcode": "KY7",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/mnc/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.20064",
+				"long": "-3.13107"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.13107,56.20064]}
+                },
+			{"type": "Feature", "id": 17, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky11rsnorthqueensferry",
+				"name": "North Queensferry Railway Station",
+				"address": "Ferryhill Road",
+				"town": "North Queensferry",
+				"postcode": "KY11 1JE",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/nqu/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.01252",
+				"long": "-3.39469"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.39469,56.01252]}
+                },
+			{"type": "Feature", "id": 18, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "eh12rshaymarket",
+				"name": "Edinburgh Haymarket Railway Station",
+				"address": "Haymarket Terrace",
+				"town": "Edinburgh",
+				"postcode": "EH12 5EY",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/hym/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "55.94562",
+				"long": "-3.21823"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.21823,55.94562]}
+                },
+			{"type": "Feature", "id": 19, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "eh1rswaverley",
+				"name": "Edinburgh Waverley Railway Station",
+				"address": "North Bridge",
+				"town": "Edinburgh",
+				"postcode": "EH1 1BB",
+				"category": "golf_travel",
+				"phone": "+44 (0)845 601 5929",
+				"email": "scotrailcustomer.relations@firstgroup.com",
+				"url": "https://www.nationalrail.co.uk/stations/edb/details.html",
+				"image": "awaiting_image_dgh.png",
+				"lat": "55.95217",
+				"long": "-3.18902"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.18902,55.95217]}
+                },
+			{"type": "Feature", "id": 20, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "ky16golfcitytaxis",
+				"name": "Golf City Taxis - St Andrews",
+				"address": "13 Argyle Street",
+				"town": "St Andrews",
+				"postcode": "KY16 9BX",
+				"category": "golf_travel",
+				"phone": "+44 (0)1334 477788",
+				"email": "info@golfcitytaxis.co.uk",
+				"url": "http://golfcitytaxis.com/price-list/",
+				"image": "standrews_ky16golfcitytaxis_0411_web.png",
+				"lat": "56.33862",
+				"long": "-2.80232"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80232,56.33862]}
+                },
+		
+			{"type": "Feature", "id": 23, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "ky16bsstandrews",
+				"name": "St Andrews Bus Station ",
+				"address": "City Road",
+				"town": "St Andrews",
+				"phone": "+44 (0)1334 474238",
+				"email": "N/K",
+				"category": "golf_travel",
+				"postcode": "KY16 9HW",
+				"url": "https://www.fifedirect.org.uk/atoz/index.cfm?fuseaction=facility.display&facid=DBB6A809-351E-4611-ACAA5081319AC2A0",
+				"image": "standrews_busstation_176_132.png",
+				"lat": "56.34065",
+				"long": "-2.80257"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80257,56.34065]}
+                },
+			{"type": "Feature", "id": 24, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "dd1dundeebusstation",
+				"name": "Dundee Bus Station",
+				"address": "Seagate",
+				"town": "Dundee",
+				"postcode": "DD1 2HR",
+				"phone": "N/K",
+				"email": "N/K",
+				"category": "golf_travel",
+				"url": "http://www.dundeetravelinfo.com",
+				"image": "awaiting_image_dgh.png",
+				"lat": "56.46329",
+				"long": "-2.96621"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.96621,56.46329]}
+                }
+		]
+	
+  
+}

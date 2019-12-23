@@ -1,0 +1,891 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+			{"type": "Feature", "id": 1, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky1dunnikierparkgc",
+				"name": "Dunnikier Park Golf Course",
+				"address": "Dunnikier Way",
+				"town": "Kirkcaldy",
+				"postcode": "KY1 3LP",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 205916",
+				"email": "golf@fife.gov.uk",
+				"url": "https://www.fifegolftrust.co.uk/our-courses/dunnikier-park/",
+				"lat": "56.136149",
+				"long": "-3.162066",
+				"image": "kirkcaldy_dunnikiergolf_0511_web.png"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.162066,56.136149]}
+                },
+			{"type": "Feature", "id": 2, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky1thorntongc",
+				"name": "Thornton Golf Course",
+				"address": "Station Road",
+				"town": "Thornton",
+				"postcode": "KY1 4DW",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 771111",
+				"email": "thorntongolf@btconnect.com",
+				"url": "http://www.thorntongolfclub.co.uk",
+				"lat": "56.167069",
+				"long": "-3.128474",
+				"image": "thornton_thorntongolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.128474,56.167069]}
+                },
+			{"type": "Feature", "id": 3, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky10crailbl",
+				"name": "Crail  - Balcomie Golf Links",
+				"address": "Balcomie Golf Course",
+				"town": "Crail",
+				"postcode": "KY10 3XN",
+				"category": "golf_18",
+				"phone": "+44 (0)1333 450686",
+				"email": "info@crailgolfingsociety.co.uk",
+				"url": "https://www.crailgolfingsociety.co.uk",
+				"lat": "56.280982",
+				"long": "-2.594039",
+				"image": "crail_crailgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.594039,56.280982]}
+                },
+			{"type": "Feature", "id": 4, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky10crailcl",
+				"name": "Crail  - Craighead Golf Links Links",
+				"address": "Balcomie Golf Course",
+				"town": "Crail",
+				"postcode": "KY10 3XN",
+				"category": "golf_18",
+				"phone": "+44 (0)1333 450686",
+				"email": "info@crailgolfingsociety.co.uk",
+				"url": "https://www.crailgolfingsociety.co.uk/",
+				"lat": "56.280696",
+				"long": "-2.593942",
+				"image": "crail_crailgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.593942,56.280696]}
+                },
+			{"type": "Feature", "id": 5, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky11pitreaviegc",
+				"name": "Pitreavie Golf Course",
+				"address": "Queensferry Road",
+				"town": "Dunfermline",
+				"postcode": "KY11 8PR",
+				"category": "golf_18",
+				"phone": "+44 (0)1383 722591",
+				"email": "N/K",
+				"url": "http://www.pitreaviegolfclub.co.uk",
+				"lat": "56.055354",
+				"long": "-3.437272",
+				"image": "pitreavie_pitreaviegolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.437272,56.055354]}
+                },
+			{"type": "Feature", "id": 6, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky12canmoregc",
+				"name": "Canmore Golf Club",
+				"address": "Venturefair Avenue",
+				"town": "Dunfermline",
+				"postcode": "KY12 0PE",
+				"category": "golf_18",
+				"phone": "+44 (0)1383 724969",
+				"email": "canmoreproshop@yahoo.co.uk",
+				"url": "http://www.canmoregolfclub.co.uk",
+				"lat": "56.083674",
+				"long": "-3.457179",
+				"image": "dunfermline_canmoregolf_0809_web.png"
+			       },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.457179,56.083674]}
+                },
+			{"type": "Feature", "id": 7, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky12dunfermlinegc",
+				"name": "Dunfermline Golf Course",
+				"address": "Pitfirrane",
+				"town": "Crossford",
+				"postcode": "KY12 8QW",
+				"category": "golf_18",
+				"phone": "+44 (0)1383 723534",
+				"email": "secretary@dunfermlinegolfclub.com",
+				"url": "https://www.dunfermlinegolfclub.com",
+				"lat": "56.058742",
+				"long": "-3.505507",
+				"image": "dunfermline_dunfermlinegolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.505507,56.058742]}
+                },
+			{"type": "Feature", "id": 8, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky12forresterparkgc",
+				"name": "Forrester Park Golf Course",
+				"address": "Pitdinnie Road",
+				"town": "Cairneyhill",
+				"postcode": "KY12 8RF",
+				"category": "golf_18",
+				"phone": "+44 (0)1383 880505",
+				"email": "Golf@ForresterParkResort.com",
+				"url": "https://www.forresterparkresort.com",
+				"lat": "56.066283",
+				"long": "-3.533837",
+				"image": "dunfermline_forresterparkgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.533837,56.066283]}
+                },
+			{"type": "Feature", "id": 9, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky15elmwoodgc",
+				"name": "Elmwood Golf Course",
+				"address": "Stratheden",
+				"town": "Cupar",
+				"postcode": "KY15 5RS",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 658780",
+				"email": "amellon@elmwood.ac.uk",
+				"url": "https://www.elmwoodgolf.co.uk",
+				"lat": "56.298282",
+				"long": "-3.049666",
+				"image": "cupar_elmwoodgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.049666,56.298282]}
+                },
+			{"type": "Feature", "id": 10, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky15ladybankgc",
+				"name": "Ladybank Golf Course",
+				"address": "Annsmuir",
+				"town": "Ladybank",
+				"postcode": "KY15 7RA",
+				"category": "golf_18",
+				"phone": "+44 (0)1337 830814",
+				"email": "info@ladybankgolf.co.uk",
+				"url": "https://www.ladybankgolf.co.uk",
+				"lat": "56.282212",
+				"long": "-3.124719",
+				"image": "ladybank_ladybankgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.124719,56.282212]}
+                },
+			{"type": "Feature", "id": 11, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16stmichaelsgc",
+				"name": "St Michaels Golf Course",
+				"address": "Gallowhill",
+				"town": "Leuchars",
+				"postcode": "KY16 0DX",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 838666",
+				"email": "stmichaelsgc@btconnect.com",
+				"url": "http://www.stmichaelsgolfclub.com/new/",
+				"lat": "56.386198",
+				"long": "-2.896335",
+				"image": "leuchars_stmichaelsgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.896335,56.386198]}
+                },
+			{"type": "Feature", "id": 12, "properties":{
+				"g-s-b": "gold",
+				"custom-icon": "",
+				"doorcode": "ky16drumoiggc",
+				"name": "Drumoig Golf Course",
+				"address": "Drumoig",
+				"town": "St Michaels",
+				"phone": "+44 (0)1382 541898",
+				"email": "starter@drumoiggolfhotel.com",
+				"category": "golf_18",
+				"postcode": "KY16 0BE",
+				"url": "https://drumoiggolfhotel.com",
+				"image": "hotel_over_loch_176_132.png",
+				"lat": "56.415538",
+				"long": "-2.909084"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.909084,56.415538]}
+                },
+			{"type": "Feature", "id": 13, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16thedukesgc",
+				"name": "Dukes Golf Course",
+				"address": "Craigtoun",
+				"town": "St Andrews",
+				"postcode": "KY16 8NS",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 474371",
+				"email": "reservations@oldcoursehotel.co.uk",
+				"url": "https://www.oldcoursehotel.co.uk/golf/the-dukes",
+				"lat": "56.31981",
+				"long": "-2.84371",
+				"image": "standrews_thedukesgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.84371,56.31981]}
+                },
+			{"type": "Feature", "id": 14, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16fairmontstandrewstgc",
+				"name": "Fairmont St Andrews - Torrance Course",
+				"address": "Balmashie",
+				"town": "St Andrews",
+				"postcode": "KY16 8PN",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 837008",
+				"email": "candice.cooper@fairmont.com",
+				"url": "https://www.fairmont.com/st-andrews-scotland/",
+				"lat": "56.324604",
+				"long": "-2.726712",
+				"image": "standrews_fairmontgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.726712,56.324604]}
+                },
+			{"type": "Feature", "id": 15, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16fairmontstandrewskgc",
+				"name": "Fairmont St Andrews - Kittocks Course",
+				"address": "Balmashie",
+				"town": "St Andrews",
+				"postcode": "KY16 8PN",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 837008",
+				"email": "candice.cooper@fairmont.com",
+				"url": "https://www.fairmont.com/st-andrews-scotland/",
+				"lat": "56.323509",
+				"long": "-2.727055",
+				"image": "standrews_fairmontgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.727055,56.323509]}
+                },
+			{"type": "Feature", "id": 16, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16kingsbarnsgl",
+				"name": "Kingsbarns Golf Links",
+				"address": "Kingsbarns",
+				"town": "Kingsbarns",
+				"postcode": "KY16 8QD",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 460860",
+				"email": "info@kingsbarns.com",
+				"url": "https://www.kingsbarns.com",
+				"lat": "56.298529",
+				"long": "-2.646079",
+				"image": "kingsbarns_ky16kingsbarnsgl_0411_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.646079,56.298529]}
+                },
+			{"type": "Feature", "id": 17, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16standrewsltoc",
+				"name": "St Andrews Links Trust - The Old Course",
+				"address": "Pilmour House",
+				"town": "St Andrews",
+				"postcode": "KY16 9SF",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 466666",
+				"email": "enquiries@standrews.org.uk",
+				"url": "https://www.standrews.com/Play/Courses/Old-Course",
+				"image": "standrews_standrewsgolf_0809_web.png",
+				"lat": "56.34382",
+				"long": "-2.80287"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80287,56.34382]}
+                },
+			{"type": "Feature", "id": 18, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16standrewsltnc",
+				"name": "St Andrews Links Trust - New Course",
+				"address": "Pilmour House",
+				"town": "St Andrews",
+				"postcode": "KY16 9SF",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 466666",
+				"email": "enquiries@standrews.org.uk",
+				"url": "https://www.standrews.com/Play/Courses/New-Course",
+				"image": "standrews_standrewsgolf_0809_web.png",
+				"lat": "56.34556",
+				"long": "-2.80951"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80951,56.34556]}
+                },
+			{"type": "Feature", "id": 19, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16standrewsltjc",
+				"name": "St Andrews Links Trust - Jubilee Course",
+				"address": "Pilmour House",
+				"town": "St Andrews",
+				"postcode": "KY16 9SF",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 466666",
+				"email": "enquiries@standrews.org.uk",
+				"url": "https://www.standrews.com/Play/Courses/Jubilee-Course",
+				"image": "standrews_standrewsgolf_0809_web.png",
+				"lat": "56.34618",
+				"long": "-2.80874"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80874,56.34618]}
+                },
+			{"type": "Feature", "id": 20, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16standrewsltec",
+				"name": "St Andrews Links Trust - Eden Course",
+				"address": "Pilmour House",
+				"town": "St Andrews",
+				"postcode": "KY16 9SF",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 466666",
+				"email": "enquiries@standrews.org.uk",
+				"url": "https://www.standrews.com/Play/Courses/Eden-Course",
+				"image": "standrews_standrewsgolf_0809_web.png",
+				"lat": "56.34974",
+				"long": "-2.81661"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.81661,56.34974]}
+                },
+			{"type": "Feature", "id": 21, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16standrewsltsc",
+				"name": "St Andrews Links Trust - Strathtyrum Course",
+				"address": "Pilmour House",
+				"town": "St Andrews",
+				"postcode": "KY16 9SF",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 466666",
+				"email": "enquiries@standrews.org.uk",
+				"url": "https://www.standrews.com/Play/Courses/Strathtyrum-Course",
+				"image": "standrews_standrewsgolf_0809_web.png",
+				"lat": "56.35023",
+				"long": "-2.81814"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.81814,56.35023]}
+                },
+			{"type": "Feature", "id": 22, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky16standrewsltcc",
+				"name": "St Andrews Links Course - Castle Course",
+				"address": "Brownhills",
+				"town": "St Andrews",
+				"postcode": "KY16",
+				"category": "golf_18",
+				"phone": "+44 (0)1334 466666",
+				"email": "enquiries@standrews.org.uk",
+				"url": "https://www.standrews.com/Play/Courses/The-Castle-Course",
+				"lat": "56.33009",
+				"long": "-2.75101",
+				"image": "standrews_standrewsgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.75101,56.33009]}
+                },
+			{"type": "Feature", "id": 23, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky2kirkcaldygc",
+				"name": "Kirkcaldy Golf Course",
+				"address": "Balwearie Road",
+				"town": "Kirkcaldy",
+				"postcode": "KY2 5LT",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 205240",
+				"email": "enquiries@kirkcaldygolfclub.co.uk",
+				"url": "https://kirkcaldygolfclub.co.uk",
+				"lat": "56.100598",
+				"long": "-3.177639",
+				"image": "kirkcaldy_kirkcaldygolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.177639,56.100598]}
+                },
+			{"type": "Feature", "id": 24, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky3aberdourgc",
+				"name": "Aberdour Golf Course",
+				"address": "Seaside Place",
+				"town": "Aberdour",
+				"postcode": "KY3 0TX",
+				"category": "golf_18",
+				"phone": "+44 (0)1383 860080",
+				"email": "manager@aberdourgolfclub.co.uk",
+				"url": "https://www.aberdourgolfclub.co.uk",
+				"lat": "56.049243",
+				"long": "-3.299245",
+				"image": "aberdour_aberdourgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.299245,56.049243]}
+                },
+			{"type": "Feature", "id": 25, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky3burntislandgc",
+				"name": "Burntisland Golf Course",
+				"address": "Dodhead, Kirkcaldy Road",
+				"town": "Burntisland",
+				"postcode": "KY3 9LQ",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 874093",
+				"email": "info@burntislandgolfhouseclub.co.uk",
+				"url": "http://www.burntislandgolfhouseclub.co.uk",
+				"lat": "56.068100",
+				"long": "-3.222674",
+				"image": "burntisland_burntislandgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.222674,56.068100]}
+                },
+			{"type": "Feature", "id": 26, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky3kinghorngc",
+				"name": "Kinghorn Golf Course",
+				"address": "Macduff Crescent",
+				"town": "Kinghorn",
+				"postcode": "KY3 9RE",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 890978",
+				"email": "golf@fife.gov.uk",
+				"url": "https://www.fifegolftrust.co.uk/our-courses/kinghorn/",
+				"lat": "56.067370",
+				"long": "-3.179656",
+				"image": "kinghorn_kinghorngolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.179656,56.067370]}
+                },
+			{"type": "Feature", "id": 27, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky4doragc",
+				"name": "Dora Golf Course",
+				"address": "Seco Place",
+				"town": "Cowdenbeath",
+				"postcode": "KY4 9SF",
+				"category": "golf_18",
+				"phone": "+44 (0)1383 513079",
+				"email": "golf@fife.gov.uk",
+				"url": "https://www.facebook.com/DoragolfFife/",
+				"lat": "56.113745",
+				"long": "-3.336464",
+				"image": "cowdenbeath_cowdenbeathgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.336464,56.113745]}
+                },
+			{"type": "Feature", "id": 28, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky5lochgellygc",
+				"name": "Lochgelly Golf Course",
+				"address": "Cartmore Road",
+				"town": "Lochgelly",
+				"postcode": "KY5 9PB",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 780174",
+				"email": "info@lochgellygolfclub.co.uk",
+				"url": "https://www.lochgellygolfclub.co.uk",
+				"lat": "56.127288",
+				"long": "-3.318890",
+				"image": "lochgelly_lochgellygolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.318890,56.127288]}
+                },
+			{"type": "Feature", "id": 29, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky6glenrothesgc",
+				"name": "Glenrothes Golf Course",
+				"address": "Golf Course Road",
+				"town": "Glenrothes",
+				"postcode": "KY6 2LA",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 750063",
+				"email": "golf@fife.gov.uk",
+				"url": "http://www.glenrothesgolf.org.uk",
+				"lat": "56.188152",
+				"long": " -3.207326",
+				"image": "glenrothes_glenrothesgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.207326,56.188152]}
+                },
+			{"type": "Feature", "id": 30, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky7balbirnieparkgc",
+				"name": "Balbirnie Park Golf Course",
+				"address": "Balbirnie Park",
+				"town": "Markinch",
+				"postcode": "KY7 6NR",
+				"category": "golf_18",
+				"phone": "+44 (0)1592 612095",
+				"email": "administrator@balbirniegolf.com",
+				"url": "http://www.balbirniegolf.com",
+				"lat": "56.211095",
+				"long": "-3.146536",
+				"image": "markinch_balbirnieparkgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-3.146536,56.211095]}
+                },
+			{"type": "Feature", "id": 31, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky8levenlinksgc",
+				"name": "Leven Links Golf Course",
+				"address": "The Promonade",
+				"town": "Leven",
+				"postcode": "KY8 4HS",
+				"category": "golf_18",
+				"phone": "+44 (0)1333 428859",
+				"email": "secretary@leven-links.com",
+				"url": "https://www.leven-links.com",
+				"lat": "56.197996",
+				"long": "-2.988297",
+				"image": "leven_levenlinksgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.988297,56.197996]}
+                },
+			{"type": "Feature", "id": 32, "properties":{
+				"g-s-b": "silver",
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky8scooniegc",
+				"name": "Scoonie Golf Course",
+				"address": "North Links",
+				"town": "Leven",
+				"postcode": "KY8 4SP",
+				"category": "golf_18",
+				"phone": "+44 (0)1333 423437",
+				"email": "golf@fife.gov.uk",
+				"url": "https://www.fifegolftrust.co.uk/our-courses/scoonie/",
+				"lat": "56.202210",
+				"long": "-2.988726",
+				"image": "leven_ky8scooniegolfcourse_0812_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.988726,56.202210]}
+                },
+			{"type": "Feature", "id": 33, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky8lundingc",
+				"name": "Lundin Golf Course",
+				"address": "Lundin Links",
+				"town": "Lundin Links",
+				"postcode": "KY8 6BA",
+				"category": "golf_18",
+				"phone": "+44 (0)1333 320202",
+				"email": "secretary@lundingolfclub.co.uk",
+				"url": "https://www.lundingolfclub.co.uk",
+				"lat": "56.211039",
+				"long": "-2.953578",
+				"image": "lundinlinks_lundinlinksgolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.953578,56.211039]}
+                },
+			{"type": "Feature", "id": 34, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky9eliegc",
+				"name": "Elie Golf Course",
+				"address": "Golf Course Lane",
+				"town": "Elie",
+				"postcode": "KY9 1AS",
+				"category": "golf_18",
+				"phone": "+44 (0)1333 330301",
+				"email": "book@golfhouseclub.org",
+				"url": "http://www.golfhouseclub.co.uk",
+				"lat": "56.191690",
+				"long": "-2.829725",
+				"image": "elie_eliegolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.829725,56.191690]}
+                },
+			{"type": "Feature", "id": 35, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "ky9charletongc",
+				"name": "Charleton Golf Course",
+				"address": "Charleton",
+				"town": "Colinsburgh",
+				"postcode": "KY9 1HG",
+				"category": "golf_18",
+				"phone": "+44 (0)1333 340505",
+				"email": "clubhouse@charleton.co.uk",
+				"url": "https://www.charleton.co.uk",
+				"lat": "56.223006",
+				"long": "-2.863934",
+				"image": "colinsburgh_charletongolf_0809_web.png"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.863934,56.223006]}
+                },
+			{"type": "Feature", "id": 36, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "dd6scotscraiggc",
+				"name": "Scotscraig Golf Course",
+				"address": "Golf Road",
+				"town": "Tayport",
+				"postcode": "DD6 9DZ",
+				"category": "golf_18",
+				"phone": "+44 (0)1382 552515",
+				"email": "admin@scotscraiggolfclub.com",
+				"url": "https://www.scotscraiggolfclub.com",
+				"image": "tayport_scotscraiggc_0211_web.png",
+				"lat": "56.44212",
+				"long": "-2.87506"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.87506,56.44212]}
+                },
+			{"type": "Feature", "id": 37, "properties":{
+				
+				
+				
+				
+				"custom-icon": "",
+				"doorcode": "fk10tulliallangc",
+				"name": "Tulliallan Golf Course",
+				"address": "Alloa Road",
+				"town": "Kincardine",
+				"postcode": "FK10 4BB",
+				"category": "golf_18",
+				"phone": "+44 (0)1259 730396",
+				"email": "tulliallangolf@btconnect.com",
+				"url": "http://www.tulliallangolf.co.uk",
+				"image": "tulliallan_tulliallangolf_0511_web.png",
+				"lat": "52.489366",
+				"long": "-0.285792"
+			 },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-0.285792,52.489366]}
+                }
+		]
+	
+}

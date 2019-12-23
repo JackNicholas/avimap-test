@@ -1,0 +1,178 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+			{"type": "Feature", "id": 1, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky16auchterlonies",
+				"name": "Auchterlonies - St Andrews",
+				"address": "2 - 4 Golf Place",
+				"town": "St Andrews",
+				"category": "golf_retail",
+				"postcode": "KY16 9JA",
+				"phone": "+44 (0)1334 473253",
+				"email": "golf@auchterlonies.com",
+				"url": "https://www.facebook.com/auchterlonies/",
+				"image": "standrews_auchterlonies_0809_int.png",
+				"lat": "56.34223",
+				"long": "-2.802517"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.802517,56.34223]}
+                },
+			
+			
+		
+			{"type": "Feature", "id": 5, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky16golfshopofstandrews",
+				"name": "The Old St Andrews Golf Shop",
+				"address": "4 Ellice Place",
+				"town": "St Andrews",
+				"category": "golf_retail",
+				"postcode": "KY16 9HU",
+				"phone": "+44 (0)1334 476996",
+				"email": "sales@golfshopofstandrews.co.uk",
+				"url": "https://golfshopofstandrews.com",
+				"image": "standrews_oldgolfshop_1108_int.png",
+				"lat": "56.34191",
+				"long": "-2.79973"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.79973,56.341914]}
+                },
+			{"type": "Feature", "id": 6, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky16kohlerproshops",
+				"name": "The Old Course Hotel Pro Shop - St Andrews",
+				"address": "old Station Road",
+				"town": "St Andrews",
+				"category": "golf_retail",
+				"postcode": "KY16 9SP",
+				"phone": "+44 (0)1334 474371",
+				"email": "reservations@oldcoursehotel.co.uk",
+				"url": "https://www.oldcoursehotel.co.uk/shopping/the-pro-shop",
+				"image": "standrews_oldcourseproshop_0511_web.png",
+				"lat": "56.344647",
+				"long": "-2.811062"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.811062,56.344647]}
+                },
+			{"type": "Feature", "id": 7, "properties":{
+			
+				"custom-icon": "",
+				"doorcode": "ky16ladieslocker",
+				"name": "Ladies Locker - St Andrews",
+				"address": "2 - 4 Golf Place",
+				"town": "St Andrews",
+				"category": "golf_retail",
+				"postcode": "KY16 2JA",
+				"phone": "+44 (0)1334 473253",
+				"email": "golf@auchterlonies.com",
+				"url": "https://www.facebook.com/auchterlonies/",
+				"image": "standrews_auchterlonies_0511_web.png",
+				"lat": "56.34255",
+				"long": "-2.80233"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80233,56.34255]}
+                },
+			{"type": "Feature", "id": 8, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky16standrewsgolfco",
+				"name": "St Andrews Golf Co - St Andrews",
+				"address": " 8 Golf Place",
+				"town": "St Andrews",
+				"category": "golf_retail",
+				"postcode": "KY16 9JA",
+				"phone": "+44 (0)1334 840860",
+				"email": "info@standrewsgolfco.com",
+				"url": "https://www.standrewsgolfco.com",
+				"image": "standrews_golfco_0411_web.png",
+				"lat": "56.34248",
+				"long": "-2.80236"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80236,56.34248]}
+                },
+			{"type": "Feature", "id": 9, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky16oldcourseshop",
+				"name": "The Old Course Shop - St Andrews",
+				"address": "The Links",
+				"town": "St Andrews",
+				"category": "golf_retail",
+				"postcode": "KY16 9JB",
+				"phone": "+44 (0)1334 466737",
+				"email": "golfshops@standrews.org.uk",
+				"url": "https://www.standrews.com/shop",
+				"image": "standrews_oldcourseshop_1108_int.png",
+				"lat": "56.34281",
+				"long": "-2.80269"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.80269,56.34281]}
+                },
+			{"type": "Feature", "id": 10, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky16thedukesproshop",
+				"name": "The Dukes Pro Shop - St Andrews",
+				"address": "Craigtoun",
+				"town": "St Andrews",
+				"category": "golf_retail",
+				"postcode": "KY16 ",
+				"phone": "+44 (0)1334 474371",
+				"email": "reservations@oldcoursehotel.co.uk",
+				"url": "https://www.oldcoursehotel.co.uk/shopping/the-pro-shop",
+				"image": "standrews_oldcourseproshop_0511_web.png",
+				"lat": "56.31991",
+				"long": "-2.84356"
+			      },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.84356,56.31991]}
+                },
+			
+			{"type": "Feature", "id": 13, "properties":{
+				
+				"custom-icon": "",
+				"doorcode": "ky9standrewsgolfco",
+				"name": "St Andrews Golf Co - Largoward",
+				"address": "20 Saint Andrews Road",
+				"town": "Largoward",
+				"postcode": "KY9",
+				"category": "golf_retail",
+				"phone": "+44 (0)1334 840860",
+				"email": "info@standrewsgolfco.com",
+				"url": "https://www.standrewsgolfco.com",
+				"image": "standrews_golfco_0411_web.png",
+				"lat": "56.25837",
+				"long": "-2.85739"
+			     },
+			    "geometry": 
+		        {"type": "Point", 
+		
+                "coordinates": [-2.85739,56.25837]}
+                }
+		]
+	
+}
