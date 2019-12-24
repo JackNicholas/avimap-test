@@ -53,7 +53,7 @@ L.tileLayer(CDB_URL, {attribution: ATTR}).addTo(map);
 
 //create layer icons
 var fgm_18 = L.icon({
-  iconUrl: 'fgm_icons/fgm18_icon2.png',
+  iconUrl: 'fgm18_icon2.png',
   iconSize: [35, 40],
   iconAnchor: [17, 35],
   popupAnchor: [0, -35]
@@ -62,21 +62,21 @@ var fgm_18 = L.icon({
   
 });
 var fgm_9 = L.icon({
-  iconUrl: 'fgm_icons/fgm9_icon2.png',
+  iconUrl: 'fgm9_icon2.png',
   iconSize: [35, 40],
   iconAnchor: [17, 35],
   popupAnchor: [0, -35]
 });
 
 var fgm_retail = L.icon({
-  iconUrl: 'fgm_icons/retail_black_35.png',
+  iconUrl: 'retail_black_35.png',
   iconSize: [35, 40],
   iconAnchor: [17, 35],
   popupAnchor: [0, -35]
 });
 
 var fgm_travel = L.icon({
-  iconUrl: 'fgm_icons/travel_35.png',
+  iconUrl: 'travel_35.png',
   iconSize: [35, 40],
   iconAnchor: [17, 35],
   popupAnchor: [0, -35]
@@ -146,18 +146,18 @@ var fgm_travelLayer = L.geoJson(false, {
 	}).addTo(map);		
 	
 //populate GeoJSON layers with data from external files
-$.getJSON("fgm_geojson/fgm_18.geojson", function(data) {
+$.getJSON("fgm_18.geojson", function(data) {
     fgm_18Layer.addData(data);
 });
-$.getJSON("fgm_geojson/fgm_9.geojson", function(data) {
+$.getJSON("fgm_9.geojson", function(data) {
     fgm_9Layer.addData(data);
 });
 
-$.getJSON("fgm_geojson/fgm_retail.geojson", function(data) {
+$.getJSON("fgm_retail.geojson", function(data) {
     fgm_retailLayer.addData(data);
 });
 
-$.getJSON("fgm_geojson/fgm_travel.geojson", function(data) {
+$.getJSON("fgm_travel.geojson", function(data) {
     fgm_travelLayer.addData(data);
 });
 
