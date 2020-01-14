@@ -52,7 +52,7 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- testing checkAndSetParams with qsLock, array length, and state of hasErrors  -->
+ <!-- testing checkAndSetParams having set qsLockOK   -->
  <script>
 
 $( document ).ready(function() {
@@ -162,7 +162,7 @@ console.log("hrmLayer searching to go here");
   //   currentEmailLong = layer.features.properties.long;
  //    currentEmailPopup = layer.features.properties.name;
  //    console.log("query string loc matches geojson"); // lose this with other logs when sure all ok
-//       qsLocOK = true;
+       qsLocOK = true;
 //     break;
 // } // end of if statement checking doorcode against query string loc
 // }); // end of eachLayer
@@ -180,6 +180,7 @@ if (!hasErrors) {
 
  setErrors = function() {
    console.log("setErrors triggered");
+   console.log("hasErrors inside setErrors is ", hasErrors);
  };
 
 
