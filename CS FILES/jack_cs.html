@@ -52,7 +52,7 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- start building checkAndSetParams  -->
+ <!-- testing checkAndSetParams with qsLock, array length, and state of hasErrors  -->
  <script>
 
 $( document ).ready(function() {
@@ -133,6 +133,10 @@ checkAndSetParams = function() {
        locExists = true;
 console.log("locExists is true");
        qsLoc = qsParams.loc;
+console.log("qsLoc is ", qsLoc);
+console.log("hasErrors is ", hasErrors);
+console.log("qsArray.length is ", qsArray.length);
+
      }
      if (key === "z") {
        zoomExists = true;
