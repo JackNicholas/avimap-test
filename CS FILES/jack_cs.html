@@ -156,17 +156,17 @@ console.log(qsZoom);
 if (locExists) {
 
 console.log("hrmLayer searching to go here");
-// hrmLayer.eachLayer(function(layer){
-// if (layer.features.properties.doorcode == qsLoc) {
-//   currentEmailLat = layer.features.properties.lat;
+  hrmLayer.eachLayer(function(layer){
+  if (layer.features.properties.doorcode == qsLoc) {
+   currentEmailLat = layer.features.properties.lat;
  console.log(currentEmailLat);
    // currentEmailLong = layer.features.properties.long;
    // currentEmailPopup = layer.features.properties.name;
 // console.log("query string loc matches geojson"); // lose this with other logs when sure all ok
    qsLocOK = true;
-//   break;
-//   } // end of if statement checking doorcode against query string loc
-//  }); // end of eachLayer
+   break;
+   } // end of if statement checking doorcode against query string loc
+}); // end of eachLayer
 
 } else {
  setErrors();
