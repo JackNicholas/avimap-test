@@ -156,7 +156,7 @@ console.log(qsZoom);
 if (locExists) {
 
 console.log("hrmLayer searching to go here");
-  hrmLayer.eachLayer(function(layer){
+  fgmLayer.eachLayer(function(layer){
   if (layer.feature.properties.doorcode == qsLoc) {
    currentEmailLat = layer.feature.properties.lat;
  console.log("current email lat var is ", currentEmailLat);
