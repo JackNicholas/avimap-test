@@ -52,7 +52,7 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- testing barebones coffeescript with placeholders  -->
+ <!-- test take 2 barebones coffeescript with placeholders  -->
  <script>
 
 ////////////////// start querystring parsing //////////////// 
@@ -93,6 +93,7 @@ locExists = false;
 zoomExists = false;
 
 checkQueryString = function() {
+console.log("checkQueryString triggered");
 var name;
 var value;
 var x;
@@ -116,7 +117,7 @@ for (_i = 0; _i < qsArray.length; _i++) {
  };
 
 checkAndSetParams = function() {
-    console.log("checkAndSetParams triggered" );
+    console.log("checkAndSetParams triggered");
   
 };
 
