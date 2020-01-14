@@ -52,8 +52,13 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- test take 2 barebones coffeescript with placeholders  -->
+ <!-- test take 2 barebones coffeescript inside doc ready function with placeholders  -->
  <script>
+
+$( document ).ready(function() {
+    console.log( "doc ready!" );
+
+
 
 ////////////////// start querystring parsing //////////////// 
 (function() {
@@ -135,6 +140,10 @@ console.log("setMap triggered");
 }).call(this); 
 
 ////////////////// end querystring parsing //////////////////
+
+}); // end doc ready function
+
+console.log("end doc ready"); 
 
  </script>
 	 
