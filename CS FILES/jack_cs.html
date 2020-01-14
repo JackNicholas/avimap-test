@@ -52,13 +52,89 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- testing calling anon function  -->
+ <!-- testing barebones coffeescript with placeholders  -->
  <script>
- 
+
+////////////////// start querystring parsing //////////////// 
 (function() {
 console.log( " anon function ready" );
+// variables for local data to compare with email string. 
+// this will change
+// as change who sending emails to or when cancelling url
+
+var currentEmailLat;
+var currentEmailLong;
+var currentEmailPopup;
+
+// checking and taking info from query string.
+
+var checkAndSetParams;
+var checkQueryString;
+var hasErrors;
+var locExists;
+var qsArray;
+var qsParams;
+var qsZoom;
+var queryString;
+var setErrors;
+var setMap;
+var zoomExists;
+var qsLoc;
+var qsLocOK;
+
+queryString = location.search;
+qsArray = [];
+hasErrors = false;
+qsParams = {};
+qsZoom = 18;
+qsLoc = "";
+qsLocOK = false;
+locExists = false;
+zoomExists = false;
+
+checkQueryString = function() {
+var name;
+var value;
+var x;
+var _i;
+var _len;
+if (queryString.length > 0) {
+// remove terminal hash character if firing js command in browser has added it
+if (queryString.charAt(queryString.length - 1) === "#") {
+ queryString.slice(0, -1);
+}
+qsArray = queryString.replace("?", "").split("&");
+
+for (_i = 0; _i < qsArray.length; _i++) {
+       x = qsArray[_i];
+       name = x.split("=")[0];
+       value = x.split("=")[1];
+       qsParams[name] = value;
+     }
+     return checkAndSetParams();
+   }
+ };
+
+checkAndSetParams = function() {
+    console.log("checkAndSetParams triggered" );
+  
+};
+
+ setErrors = function() {
+   console.log("setErrors triggered");
+ };
+
+
+ setMap = function() {
+console.log("setMap triggered");
+};
+
+ checkQueryString();
+
 }).call(this); 
- 
+
+////////////////// end querystring parsing //////////////////
+
  </script>
 	 
 </body>
