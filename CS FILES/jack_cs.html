@@ -52,7 +52,7 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- test take 2 barebones coffeescript inside doc ready function with placeholders  -->
+ <!-- start building checkAndSetParams  -->
  <script>
 
 $( document ).ready(function() {
@@ -62,7 +62,7 @@ $( document ).ready(function() {
 
 ////////////////// start querystring parsing //////////////// 
 (function() {
-console.log( " anon function ready" );
+console.log( " anon function ready");
 // variables for local data to compare with email string. 
 // this will change
 // as change who sending emails to or when cancelling url
@@ -123,8 +123,56 @@ for (_i = 0; _i < qsArray.length; _i++) {
 
 checkAndSetParams = function() {
     console.log("checkAndSetParams triggered");
+    // abort if we have more params than we expect
+   var key;
+   if (qsArray.length > 2) {
+     setErrors();
+   }
+   for (key in qsParams) {
+     if (key === "loc") {
+       locExists = true;
+console.log("locExists is true");
+       qsLoc = qsParams.loc;
+     }
+     if (key === "z") {
+       zoomExists = true;
+console.log("zoomExists is true");
+     }
+   }
+   if (zoomExists) {
+     qsZoom = parseInt(qsParams.z);
+console.log(qsZoom);
+   }
+
+// this section is revised to use geojson
+// on getting location (qsLoc),
+// set current lat long and content to match doorcode found in loc
+// then in function setMap we set fly to, and then create and open popup
+
+if (locExists) {
+
+console.log("hrmLayer searching to go here");
+ // hrmLayer.eachLayer(function(layer){
+  // if (layer.features.properties.doorcode == qsLoc) {
+   //    currentEmailLat = layer.features.properties.lat;
+  //   currentEmailLong = layer.features.properties.long;
+ //    currentEmailPopup = layer.features.properties.name;
+ //    console.log("query string loc matches geojson"); // lose this with other logs when sure all ok
+//       qsLocOK = true;
+//     break;
+// } // end of if statement checking doorcode against query string loc
+// }); // end of eachLayer
+
+} else {
+ setErrors();
+}
+if (!qsLocOK) {setErrors();};
+if (!hasErrors) {
+ return setMap();
+}
+
   
-};
+}; // end checkAndSetParams
 
  setErrors = function() {
    console.log("setErrors triggered");
@@ -141,9 +189,10 @@ console.log("setMap triggered");
 
 ////////////////// end querystring parsing //////////////////
 
+console.log("end doc ready"); 
 }); // end doc ready function
 
-console.log("end doc ready"); 
+
 
  </script>
 	 
