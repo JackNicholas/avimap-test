@@ -52,17 +52,18 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- testing hrmLayer search   -->
+ <!-- testing fgmLayer search   -->
  <script>
 
 $( document ).ready(function() {
-    console.log( "doc ready!" );
+    // console.log( "doc ready!" );
 
 
 
 ////////////////// start querystring parsing //////////////// 
 (function() {
-console.log( " anon function ready");
+// console.log( " anon function ready");
+
 // variables for local data to compare with email string. 
 // this will change
 // as change who sending emails to or when cancelling url
@@ -98,7 +99,7 @@ locExists = false;
 zoomExists = false;
 
 checkQueryString = function() {
-console.log("checkQueryString triggered");
+// console.log("checkQueryString triggered");
 var name;
 var value;
 var x;
@@ -122,7 +123,7 @@ for (_i = 0; _i < qsArray.length; _i++) {
  };
 
 checkAndSetParams = function() {
-    console.log("checkAndSetParams triggered");
+    // console.log("checkAndSetParams triggered");
     // abort if we have more params than we expect
    var key;
    if (qsArray.length > 2) {
@@ -131,21 +132,21 @@ checkAndSetParams = function() {
    for (key in qsParams) {
      if (key === "loc") {
        locExists = true;
-console.log("locExists is true");
+// console.log("locExists is true");
        qsLoc = qsParams.loc;
-console.log("qsLoc is ", qsLoc);
-console.log("hasErrors is ", hasErrors);
-console.log("qsArray.length is ", qsArray.length);
+// console.log("qsLoc is ", qsLoc);
+// console.log("hasErrors is ", hasErrors);
+// console.log("qsArray.length is ", qsArray.length);
 
      }
      if (key === "z") {
        zoomExists = true;
-console.log("zoomExists is true");
+// console.log("zoomExists is true");
      }
    }
    if (zoomExists) {
      qsZoom = parseInt(qsParams.z);
-console.log(qsZoom);
+// console.log(qsZoom);
    }
 
 // this section is revised to use geojson
@@ -181,7 +182,7 @@ if (!hasErrors) {
 
  setErrors = function() {
    console.log("setErrors triggered");
-   console.log("hasErrors inside setErrors is ", hasErrors);
+   // console.log("hasErrors inside setErrors is ", hasErrors);
  };
 
 
@@ -195,7 +196,7 @@ console.log("setMap triggered");
 
 ////////////////// end querystring parsing //////////////////
 
-console.log("end doc ready"); 
+// console.log("end doc ready"); 
 }); // end doc ready function
 
 
