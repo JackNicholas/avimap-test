@@ -165,7 +165,4 @@ $.getJSON("fgm_travel.geojson", function(data) {
 var fgmLayer = L.layerGroup([fgm_18Layer, fgm_9Layer, fgm_retailLayer, fgm_travelLayer ]);
 
 
-// test calling var from anon function
 
-var jnTest;
-jnTest = "testing global jnTest var"; 
