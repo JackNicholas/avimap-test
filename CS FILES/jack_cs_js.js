@@ -162,7 +162,7 @@ $.getJSON("fgm_travel.geojson", function(data) {
 });
 
 
-var fgmLayer = L.layerGroup([fgm_18Layer, fgm_9Layer, fgm_retailLayer, fgm_travelLayer ]);
+// var fgmLayer = L.layerGroup([fgm_18Layer, fgm_9Layer, fgm_retailLayer, fgm_travelLayer ]);
 
-
+var fgmLayer = L.featureGroup([fgm_18Layer, fgm_9Layer, fgm_retailLayer, fgm_travelLayer]);
 
