@@ -26,7 +26,7 @@
             
                 <div class="row"><!-- row -->
                     <div class="col-md-10 col-md-offset-1 text-left"></div>
-                    <h2>What is Lorem Ipsum? 18.11</h2>
+                    <h2>What is Lorem Ipsum? 18.20</h2>
                     <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div><div>
                     <h2>Why do we use it?</h2>
@@ -52,7 +52,7 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- test jquery loop through single file with alert    -->
+ <!-- test jquery loop through single file - look for lat    -->
  <script>
  
  
@@ -180,9 +180,9 @@ $.each(data.features, function (key, val) {
    $.each(val.properties, function(i,j){
     if (i == "doorcode" && j == qsLoc) {
        //console.log("got it");
-       alert("got it: "+ qsLoc)
+       alert("got it and lat is: " + val.properties.lat)
        //currentEmailLat = val.properties.lat;
-       //console.log("current email lat var is ", currentEmailLat);
+       console.log("current email lat var is ", currentEmailLat);
        //currentEmailLong = val.properties.long;
        //currentEmailPopup = val.properties.name;
     };
