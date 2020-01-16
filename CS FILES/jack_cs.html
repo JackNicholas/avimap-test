@@ -26,7 +26,7 @@
             
                 <div class="row"><!-- row -->
                     <div class="col-md-10 col-md-offset-1 text-left"></div>
-                    <h2>What is Lorem Ipsum? 19.12</h2>
+                    <h2>What is Lorem Ipsum? 13.03</h2>
                     <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div><div>
                     <h2>Why do we use it?</h2>
@@ -52,23 +52,13 @@
  <script src="jack_cs_js.js"></script>
  <script src="bootstrap.min.js"></script>
  
- <!-- test console.log("current email lat var is ", currentEmailLat);    -->
+ <!-- clean up comments / test scrollTo    -->
  <script>
- 
- 
- 
 
 $( document ).ready(function() {
-    // console.log( "doc ready!" );
-
-// test calling var from anon function
-
-var jnTest;
-jnTest = "testing global jnTest var"; 
 
 ////////////////// start querystring parsing //////////////// 
 (function() {
-// console.log( " anon function ready");
 
 // variables for local data to compare with email string. 
 // this will change
@@ -105,7 +95,7 @@ locExists = false;
 zoomExists = false;
 
 checkQueryString = function() {
-// console.log("checkQueryString triggered");
+
 var name;
 var value;
 var x;
@@ -129,7 +119,7 @@ for (_i = 0; _i < qsArray.length; _i++) {
  };
 
 checkAndSetParams = function() {
-    // console.log("checkAndSetParams triggered");
+
     // abort if we have more params than we expect
    var key;
    if (qsArray.length > 2) {
@@ -138,21 +128,14 @@ checkAndSetParams = function() {
    for (key in qsParams) {
      if (key === "loc") {
        locExists = true;
-// console.log("locExists is true");
        qsLoc = qsParams.loc;
-// console.log("qsLoc is ", qsLoc);
-// console.log("hasErrors is ", hasErrors);
-// console.log("qsArray.length is ", qsArray.length);
-
      }
      if (key === "z") {
        zoomExists = true;
-// console.log("zoomExists is true");
      }
    }
    if (zoomExists) {
      qsZoom = parseInt(qsParams.z);
-// console.log(qsZoom);
    }
 
 // this section is revised to use geojson
@@ -163,24 +146,11 @@ checkAndSetParams = function() {
 if (locExists) {
 
 qsLocOK = true;
-console.log("fgmLayer searching to go here");
-// console.log(fgmLayer);
-console.log(jnTest);
-
-//fgmLayer.eachLayer(function (layer) { 
-//layer.eachLayer(function (layer) { 
-//var dc = layer.feature.properties.doorcode;
-//if(dc == qsLoc){console.log("found it!");}
-// console.log(dc);
-//}); 
-//});
 
 $.getJSON('fgm_9.geojson', function (data) {
 $.each(data.features, function (key, val) {
    $.each(val.properties, function(i,j){
     if (i == "doorcode" && j == qsLoc) {
-       //console.log("got it");
-       alert("got it and lat is: " + val.properties.lat)
        currentEmailLat = val.properties.lat;
        console.log("current email lat var is ", currentEmailLat);
        currentEmailLong = val.properties.long;
@@ -196,7 +166,7 @@ $.each(data.features, function (key, val) {
  setErrors();
 }
 
-// alert("current email lat var is " + currentEmailLat);
+
 
 if (!qsLocOK) {setErrors();};
 if (!hasErrors) {
@@ -214,6 +184,8 @@ if (!hasErrors) {
 
  setMap = function() {
 console.log("setMap triggered");
+$("#section2").animate({ scrollTop: $('#section2').prop("scrollHeight")}, 1000);
+return alert("jump to map"); 
 };
 
  checkQueryString();
