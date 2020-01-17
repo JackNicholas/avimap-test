@@ -26,7 +26,7 @@
             
                 <div class="row"><!-- row -->
                     <div class="col-md-10 col-md-offset-1 text-left"></div>
-                    <h2>What is Lorem Ipsum? 08.56</h2>
+                    <h2>What is Lorem Ipsum? 09.04</h2>
                     <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div><div>
                     <h2>Why do we use it?</h2>
@@ -158,9 +158,9 @@ $.getJSON('fgm_9.geojson', function (data) {
 $.each(data.features, function (key, val) {
    $.each(val.properties, function(i,j){
     if (i == "doorcode" && j == qsLoc) {
-       currentEmailLat = val.properties.lat;
+       currentEmailLat = parseInt(val.properties.lat);
        console.log("current email lat var is ", currentEmailLat);
-       currentEmailLong = val.properties.long;
+       currentEmailLong = parseInt(val.properties.long);
        currentEmailPopup = val.properties.name;
        console.log(currentEmailLong, ":::", currentEmailPopup);
     };
@@ -195,8 +195,8 @@ if (!hasErrors) {
 // $("#submap").scrollTop(0);
 // return alert("see your location, " +  currentEmailPopup + ", centred on the map. click icon for more info about " + currentEmailPopup + "."); 
 
-// map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
-map.flyTo([56.112943,-3.563507], 17); // end fly to
+map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
+// map.flyTo([56.112943,-3.563507], 17); // end fly to
        // console.log("fly to triggered", currentEmailLat, currentEmailLong);
        // console.log(map);
        console.log("fly to triggered");
