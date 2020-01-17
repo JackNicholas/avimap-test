@@ -195,9 +195,11 @@ if (!hasErrors) {
 // $("#submap").scrollTop(0);
 // return alert("see your location, " +  currentEmailPopup + ", centred on the map. click icon for more info about " + currentEmailPopup + "."); 
 
-map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
-       console.log("fly to triggered", currentEmailLat, currentEmailLong);
+// map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
+map.flyTo([-3.563507,56.112943], 17); // end fly to
+       // console.log("fly to triggered", currentEmailLat, currentEmailLong);
        // console.log(map);
+       console.log("fly to triggered");
 
 };
 
