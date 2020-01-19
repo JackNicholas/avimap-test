@@ -26,7 +26,7 @@
             
                 <div class="row"><!-- row -->
                     <div class="col-md-10 col-md-offset-1 text-left"></div>
-                    <h2>What is Lorem Ipsum? 15.48</h2>
+                    <h2>What is Lorem Ipsum? 08.18</h2>
                     <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div><div>
                     <h2>Why do we use it?</h2>
@@ -154,9 +154,8 @@ checkAndSetParams = function() {
 // set current lat long and content to match doorcode found in loc
 // then in function setMap we set fly to, and then create and open popup
 
-if (locExists) {
+if (locExists) {qsLocOK = true;} else {setErrors();};
 
-qsLocOK = true;
 
 $.getJSON('fgm_9.geojson', function (data) {
 $.each(data.features, function (key, val) {
@@ -167,24 +166,26 @@ $.each(data.features, function (key, val) {
        currentEmailLong = parseFloat(val.properties.long);
        currentEmailPopup = val.properties.name;
        console.log(currentEmailLong, ":::", currentEmailPopup);
-    };
-  })    
-});
-});
+    }; // end if
+  })    // end inner each
+}); // end outer each
 
-  
-} else {
- setErrors();
+if (!qsLocOK && !hasErrors) {
+setMap(currentEmailLat, currentEmailLong, currentEmailPopup);
 }
 
+}); // end getJSON
 
 
-if (!qsLocOK) {setErrors();};
-if (!hasErrors) {
- return setMap(parseFloat(val.properties.lat),parseFloat(val.properties.long));
-}
 
-  
+
+// if (!qsLocOK) {setErrors();};
+// if (!hasErrors) {
+//  return setMap(parseFloat(val.properties.lat),parseFloat(val.properties.long));
+// }
+
+return true; 
+
 }; // end checkAndSetParams
 
  setErrors = function() {
@@ -193,14 +194,14 @@ if (!hasErrors) {
  };
 
 
- setMap = function(x,y) {
+ setMap = function(x,y,pop) {
 // console.log("setMap triggered");
 // $("html, body").delay(2000).animate({scrollTop: $('#submap').offset().top }, 2000);
 // $("#submap").scrollTop(0);
 // return alert("see your location, " +  currentEmailPopup + ", centred on the map. click icon for more info about " + currentEmailPopup + "."); 
 
 // console.log(currentEmailLong, ":::from setMap", currentEmailLat);
-console.log(x, ":::from setMap", y, currentEmailPopup);
+console.log(x, ":::from setMap", y, pop);
 
 
 // map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
