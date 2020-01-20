@@ -26,7 +26,7 @@
             
                 <div class="row"><!-- row -->
                     <div class="col-md-10 col-md-offset-1 text-left"></div>
-                    <h2>What is Lorem Ipsum? 11.00</h2>
+                    <h2>What is Lorem Ipsum? 11.19</h2>
                     <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div><div>
                     <h2>Why do we use it?</h2>
@@ -74,12 +74,17 @@ $( document ).ready(function() {
 var currentEmailLat;
 var currentEmailLong;
 var currentEmailPopup;
+var qsFile; 
+var qsGeoJSON;
 
 currentEmailLat = "";
 currentEmailLong = "";
 currentEmailPopup = "testing popup and early declaration";
+qsFile = 1; // set default file in case not included in querystring
+qsGeoJSON = "";
 
 var getAndSetLocationData;
+
 
 // checking and taking info from query string.
 
@@ -134,8 +139,9 @@ for (_i = 0; _i < qsArray.length; _i++) {
 checkAndSetParams = function() {
 
     // abort if we have more params than we expect
+    // now length is 3 as have added geojson file choice 
    var key;
-   if (qsArray.length > 2) {
+   if (qsArray.length > 3) {
      setErrors();
    }
    for (key in qsParams) {
@@ -150,8 +156,26 @@ checkAndSetParams = function() {
    if (zoomExists) {
      qsZoom = parseInt(qsParams.z);
    }
+     if (key === "f") {
+       qsFile = parseInt(qsParams.f);
+     }
+
 
 if (locExists) {qsLocOK = true;} else {setErrors();};
+
+switch(qsFile) {
+  case 1:
+    qsGeoJSON = "fgm_9.geojson";
+    break;
+  case 2:
+    qsGeoJSON = "fgm_18.geojson";
+    break;
+  case 3:
+    qsGeoJSON = "fgm_retail.geojson";
+    break;
+  default:
+    qsGeoJSON = "fgm_9.geojson";
+};
 
 return getAndSetLocationData();
 
@@ -167,7 +191,7 @@ getAndSetLocationData = function() {
 // then in function setMap we set fly to, and then create and open popup
 
 
-$.getJSON('fgm_9.geojson', function (data) {
+$.getJSON(qsGeoJSON, function (data) {
 $.each(data.features, function (key, val) {
    $.each(val.properties, function(i,j){
     if (i == "doorcode" && j == qsLoc) {
