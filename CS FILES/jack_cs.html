@@ -26,7 +26,7 @@
             
                 <div class="row"><!-- row -->
                     <div class="col-md-10 col-md-offset-1 text-left"></div>
-                    <h2>What is Lorem Ipsum? 10.22</h2>
+                    <h2>What is Lorem Ipsum? 10.28</h2>
                     <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div><div>
                     <h2>Why do we use it?</h2>
@@ -207,6 +207,9 @@ return true;
 
 
  setMap = function() {
+ 
+ var popup; 
+ popup = ""; 
 
 console.log("setMap triggered");
 
@@ -218,7 +221,9 @@ console.log("attempting to set map");
 $("html, body").delay(2000).animate({scrollTop: $('#submap').offset().top }, 1000);
 map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
 
-alert("your location is centred on this map. Click on icon for more information about it. Enjoy exploring our map!"); 
+popup = L.popup().setLatLng([currentEmailLat, currentEmailLong]).setContent(currentEmailPopup).openOn(map);
+
+// alert("Your location is centred on this map. Click on icon for more information about it. Enjoy exploring our map!"); 
 
 } 
 else {
