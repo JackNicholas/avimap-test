@@ -79,6 +79,8 @@ currentEmailLat = "";
 currentEmailLong = "";
 currentEmailPopup = "testing popup and early declaration";
 
+var getAndSetLocationData;
+
 // checking and taking info from query string.
 
 var checkAndSetParams;
@@ -149,12 +151,20 @@ checkAndSetParams = function() {
      qsZoom = parseInt(qsParams.z);
    }
 
+if (locExists) {qsLocOK = true;} else {setErrors();};
+
+return getAndSetLocationData();
+
+}; // end checkAndSetParams
+
+
+getAndSetLocationData = function() {
+
 // this section is revised to use geojson
+// and is a new function
 // on getting location (qsLoc),
 // set current lat long and content to match doorcode found in loc
 // then in function setMap we set fly to, and then create and open popup
-
-if (locExists) {qsLocOK = true;} else {setErrors();};
 
 
 $.getJSON('fgm_9.geojson', function (data) {
@@ -165,32 +175,26 @@ $.each(data.features, function (key, val) {
        console.log("current email lat var is ", currentEmailLat);
        currentEmailLong = parseFloat(val.properties.long);
        currentEmailPopup = val.properties.name;
-       console.log(currentEmailLong, ":::", currentEmailPopup);
+       console.log(currentEmailLong, ":::", currentEmailPopup); 
     }; // end if
   })    // end inner each
 }); // end outer each
 
-if (!qsLocOK && !hasErrors) {
-console.log("attempting to set map");
+
+})
+.done(function() {
+return setMap();
+})
+.fail(function() {
+return setErrors();
+});
+// end getJSON
+
+
+// return true; 
 // setMap(currentEmailLat, currentEmailLong, currentEmailPopup);
-} 
-else {
-console.log("failed set map check: qsLockOK is ", qsLockOK, " and hasErrors is ", hasErrors);
-};
 
-}); // end getJSON
-
-
-
-
-// if (!qsLocOK) {setErrors();};
-// if (!hasErrors) {
-//  return setMap(parseFloat(val.properties.lat),parseFloat(val.properties.long));
-// }
-
-return true; 
-
-}; // end checkAndSetParams
+}; // end getAndSetLocationData
 
  setErrors = function() {
    console.log("setErrors triggered");
@@ -198,24 +202,40 @@ return true;
  };
 
 
- setMap = function(x,y,pop) {
-// console.log("setMap triggered");
+ setMap = function() {
+ // console.log("setMap triggered");
+ if (!qsLocOK && !hasErrors) {
+console.log("attempting to set map");
+
+console.log(currentEmailLong, ":::from setMap", currentEmailLat);
+
 // $("html, body").delay(2000).animate({scrollTop: $('#submap').offset().top }, 2000);
+// map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
+
+} 
+else {
+console.log("failed set map check: qsLockOK is ", qsLockOK, " and hasErrors is ", hasErrors);
+setErrors(); 
+};
+
+ 
+ 
+
 // $("#submap").scrollTop(0);
 // return alert("see your location, " +  currentEmailPopup + ", centred on the map. click icon for more info about " + currentEmailPopup + "."); 
 
-// console.log(currentEmailLong, ":::from setMap", currentEmailLat);
-console.log(x, ":::from setMap", y, pop);
+// console.log(x, ":::from setMap", y, pop);
 
 
-// map.flyTo([currentEmailLat,currentEmailLong], 17); // end fly to
+
 // map.flyTo([56.112943,-3.563507], 17); // end fly to
        // console.log("fly to triggered", currentEmailLat, currentEmailLong);
        // console.log(map);
-       console.log("fly to triggered");
+       // console.log("fly to triggered");
        // alert(currentEmailLong + "  :::   " currentEmailLat); 
 
-};
+return true; 
+}; // end setMap
 
  checkQueryString();
 
