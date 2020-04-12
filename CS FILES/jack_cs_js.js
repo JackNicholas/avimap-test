@@ -116,19 +116,30 @@ function getfgm_travelMarker(feature, latlng) {
 //
 //}
 
+//attach popup with button and map move command to the markers
+
+function oneachfeature2(feature, layer) {          
+                   layer.bindPopup('<button class="trigger">Say hi</button>').openPopup();
+
+}
+
+
+
+// '<button class="trigger">Say hi</button>'
+
 //attach tooltips and popup to the markers as required
 // touch devices do not need tooltip
-function oneachfeature2(feature, layer) {          
+//function oneachfeature2(feature, layer) {          
   	// if a touch device, attach pop up but not tooltip
-	if (L.Browser.touch){
-   		layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + '<button class="trigger">Say hi</button>').openPopup();
-     }
+//	if (L.Browser.touch){
+  // 		layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + '<button class="trigger">Say hi</button>').openPopup();
+    // }
 // else (if not a touch device) attach pop up and tooltip
-	else {
-			layer.bindTooltip("<strong>" + feature.properties.name + "</strong>");
-			layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + '<button class="trigger">Say hi</button>'>test change map from popup on desktop devices</a>").openPopup();
-	}
-}
+//	else {
+//			layer.bindTooltip("<strong>" + feature.properties.name + "</strong>");
+//			layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + '<button class="trigger">Say hi</button>'>test change map from popup on desktop devices</a>").openPopup();
+//	}
+//}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////
