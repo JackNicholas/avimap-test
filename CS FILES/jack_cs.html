@@ -291,6 +291,21 @@ return false;
 ////////////////// end querystring parsing //////////////////
 
 // console.log("end doc ready"); 
+
+
+// insert new function to change map location
+// from link in pop up
+// tried 2020-04-12
+// this function is called from function 
+// oneachfeature2 in js file
+
+var changeMapFromPopup;
+
+changeMapFromPopup = function(popLat, popLng, popZoom) {
+	map.flyTo([popLat,popLng], popZoom;
+};
+
+
 }); // end doc ready function
 
 
