@@ -293,12 +293,14 @@ return false;
 // console.log("end doc ready"); 
 
 
-// insert new function to change map location
-// from link in pop up
+// insert jquery and leaflet to change map location
+// from linked button in pop up
 // tried 2020-04-12
-// this function is called from function 
+// this is called from function 
 // oneachfeature2 in js file
-// now moved to js file 
+
+$('#map').on('click', '.trigger', function() {
+alert('Hello from Toronto!');});
 
 
 }); // end doc ready function

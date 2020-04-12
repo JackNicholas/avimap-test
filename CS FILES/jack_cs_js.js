@@ -121,23 +121,17 @@ function getfgm_travelMarker(feature, latlng) {
 function oneachfeature2(feature, layer) {          
   	// if a touch device, attach pop up but not tooltip
 	if (L.Browser.touch){
-   		layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + "<a href='javascript:changeMapFromPopup(55.94794,-3.36480, 18)'">test change map from popup on mobile devices</a>").openPopup();
+   		layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + '<button class="trigger">Say hi</button>').openPopup();
      }
 // else (if not a touch device) attach pop up and tooltip
 	else {
 			layer.bindTooltip("<strong>" + feature.properties.name + "</strong>");
-			layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + "<a href='javascript:changeMapFromPopup(55.94794,-3.36480, 18)'">test change map from popup on desktop devices</a>").openPopup();
+			layer.bindPopup("<strong>" + feature.properties.name + "</strong><br/>" + feature.properties.phone + "<br/>" + '<button class="trigger">Say hi</button>'>test change map from popup on desktop devices</a>").openPopup();
 	}
 }
 
-var changeMapFromPopup;
 
-changeMapFromPopup = function(popLat, popLng, popZoom) {
-	map.flyTo([popLat,popLng], popZoom);
-};
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 //displaying the data//
 /////////////////////////////////////////////////////////////////////////////////////////////
 
