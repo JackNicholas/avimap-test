@@ -130,6 +130,11 @@ function oneachfeature2(feature, layer) {
 	}
 }
 
+var changeMapFromPopup;
+
+changeMapFromPopup = function(popLat, popLng, popZoom) {
+	map.flyTo([popLat,popLng], popZoom);
+};
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
