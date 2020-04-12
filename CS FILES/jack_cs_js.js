@@ -119,7 +119,7 @@ function getfgm_travelMarker(feature, latlng) {
 //attach popup with button and map move command to the markers
 
 function oneachfeature2(feature, layer) {          
-                   layer.bindPopup('<button class="trigger">Say hi</button>').openPopup();
+                   layer.bindPopup('<button class="trigger">Reposition map</button>').openPopup();
 
 }
 
